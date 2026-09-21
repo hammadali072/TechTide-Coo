@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+    --font-schibsted-grotesk: "Schibsted Grotesk";
+
+    --color-tint-gray: #f8f8f8;
+    --color-black: #0a0a0a;
+
+    --color-primary-start: #4843d1;
+    --color-primary-end: #5fafe1;
+
+    --color-primary: #4843d1;
+}
+
+@layer base {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-schibsted-grotesk);
+        background-color: var(--color-tint-gray);
+        color: var(--color-black);
+        min-width: 320px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .heading-h1 {
+        @apply text-4xl md:text-6xl xl:text-7xl font-semibold leading-tight text-black;
+    }
+
+    .heading-h2 {
+        @apply text-3xl md:text-5xl font-semibold leading-tight text-black;
+    }
+
+    .heading-h3 {
+        @apply text-2xl md:text-3xl font-semibold leading-snug text-black;
+    }
+
+    .heading-h4 {
+        @apply text-xl md:text-2xl font-medium leading-snug text-black;
+    }
+
+    .heading-h5 {
+        @apply text-lg md:text-xl font-medium leading-snug text-black;
+    }
+
+    .heading-h6 {
+        @apply text-base md:text-lg font-medium leading-snug text-black;
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font: inherit;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+        @apply outline-2 outline-offset-2 outline-primary;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    input,
+    select,
+    textarea {
+        outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+}
+
+@utility container {
+    max-width: 1320px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+@utility container-fluid {
+    width: 100%;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+@utility text-gradient {
+    @apply bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent;
+}
+
+@utility surface-shadow {
+    box-shadow: 0 18px 55px rgb(10 10 10 / 0.08);
+}
