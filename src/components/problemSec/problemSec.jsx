@@ -28,7 +28,7 @@ export default function ProblemSec() {
     <section className="py-20 bg-tint-black-2 border-y border-white/10 relative overflow-hidden">
       <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-red-500/20 text-primary text-xs font-semibold uppercase tracking-wider">
             The Industry Challenge
           </span>
           <h2 className="heading-h2 text-white">
@@ -47,7 +47,7 @@ export default function ProblemSec() {
                 key={idx}
                 className="bg-black border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all group"
               >
-                <div className="p-3 rounded-xl bg-red-500/10 text-red-400 w-fit mb-4 group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:scale-110 transition-transform">
                   <IconComp size={24} weight="bold" />
                 </div>
                 <h3 className="heading-h5 text-white mb-2">{item.title}</h3>

@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import clsx from "clsx";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import "./globals.css";
@@ -37,11 +38,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${schibstedGrotesk.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className={clsx(schibstedGrotesk.variable, "h-full antialiased")}>
+      <body className="min-h-full flex flex-col bg-black">
         <Navbar />
         <main className="flex-1 pt-20">{children}</main>
         <Footer />
+        <div className="fixed border border-white left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px] duration-300 bg-[#2f2f2f]/50" />
       </body>
     </html>
   );
