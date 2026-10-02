@@ -1,76 +1,82 @@
 import Image from "next/image";
-import { CheckCircleIcon, RocketLaunchIcon, ShieldCheckIcon, LightningIcon } from "@phosphor-icons/react/dist/ssr";
+import clsx from "clsx";
+import {
+  LightningIcon,
+  TargetIcon,
+  ChartLineUpIcon,
+} from "@phosphor-icons/react/dist/ssr";
+
+const solutions = [
+  {
+    icon: LightningIcon,
+    title: "Conversion-Focused Design",
+    desc: "We don't just build websites; we build lead-generation machines designed to convert visitors into loyal customers.",
+  },
+  {
+    icon: TargetIcon,
+    title: "Authority Positioning",
+    desc: "We help you niche down and communicate your unique value, positioning you as the go-to expert in your industry.",
+  },
+  {
+    icon: ChartLineUpIcon,
+    title: "Growth Systems",
+    desc: "Seamlessly integrate CRM, email marketing, and analytics to track your ROI and scale with confidence.",
+  },
+];
 
 export default function SolutionSec() {
-  const solutions = [
-    {
-      title: "Sub-Second Static Export Architecture",
-      desc: "Pre-rendered Next.js static pages served directly from global CDN nodes for zero latency and instant page loads.",
-      icon: LightningIcon,
-    },
-    {
-      title: "AI-Powered Automation Pipelines",
-      desc: "Seamless integration of custom LLM agents and workflow automations that eliminate 70%+ of manual operational overhead.",
-      icon: RocketLaunchIcon,
-    },
-    {
-      title: "Direct Enterprise CRM Integration",
-      desc: "Inbound leads automatically verified, categorized, and funneled directly into your CRM with zero data loss.",
-      icon: CheckCircleIcon,
-    },
-    {
-      title: "Production-Grade Security & SLA",
-      desc: "Robust code quality, clean architecture, automated testing, and guaranteed 99.9% uptime for continuous growth.",
-      icon: ShieldCheckIcon,
-    },
-  ];
-
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section className="py-24 bg-black relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary/5 rounded-full blur-[120px]" />
+      </div>
+
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl bg-tint-black-2 border border-white/10 p-4 shadow-2xl overflow-hidden group">
-              <Image
-                src="/assets/SAAS Image (1).webp"
-                alt="TechTide Solution Architecture"
-                width={550}
-                height={420}
-                className="rounded-xl w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/80 backdrop-blur-md border border-white/10">
-                <div className="text-xs text-primary font-semibold uppercase tracking-wider">The TechTide Edge</div>
-                <div className="text-base font-bold text-white mt-1">Enterprise-Grade Performance Engineered for Scale</div>
-              </div>
-            </div>
+
+        <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
+          <h2 className="heading-h2">
+            From Generic Profile to{" "}
+            <span className="text-gradient">Growth Machine</span>
+          </h2>
+          <p className="text-white/55 text-base leading-relaxed">We stop the leak in your sales funnel by implementing a proprietary 3-step system that clarifies your message, builds authority and optimizes for conversions.</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+          <div className="relative rounded-2xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60 group">
+            <Image
+              src="/assets/Dashboard-Growth.webp"
+              alt="TechTide Growth Dashboard"
+              width={700}
+              height={500}
+              className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-transparent pointer-events-none" />
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
-              The TechTide Solution
-            </span>
-            <h2 className="heading-h2 text-white">
-              Modern Digital Engineering <span className="text-gradient">That Drives Results</span>
-            </h2>
-            <p className="text-base text-white/70">
-              We combine cutting-edge tech stack standards with agile product design to deliver fast, secure, and revenue-generating digital platforms.
-            </p>
+          <div className="flex flex-col gap-7">
+            {solutions.map(({ icon: Icon, title, desc }, idx) => (
+              <div
+                key={idx}
+                className={clsx(
+                  "flex gap-5 group",
+                  idx !== solutions.length - 1 && "pb-7 border-b border-white/8"
+                )}
+              >
+                <div className="flex-shrink-0 size-11 rounded-lg border border-primary/20 bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 group-hover:border-primary/35 transition-all duration-300">
+                  <Icon
+                    size={20}
+                    weight="regular"
+                    className="text-primary/80 group-hover:text-primary transition-colors duration-300"
+                  />
+                </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
-              {solutions.map((item, idx) => {
-                const IconComp = item.icon;
-                return (
-                  <div key={idx} className="p-4 rounded-xl bg-tint-black-2 border border-white/10 space-y-2">
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary w-fit">
-                      <IconComp size={20} weight="bold" />
-                    </div>
-                    <h3 className="heading-h6 text-white font-semibold">{item.title}</h3>
-                    <p className="text-xs text-white/60 leading-relaxed">{item.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
+                <div className="space-y-1.5">
+                  <h3 className="heading-h6 text-white">{title}</h3>
+                  <p className="text-sm text-white/55 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

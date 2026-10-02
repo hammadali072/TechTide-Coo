@@ -227,6 +227,26 @@ export const LeadershipData = [
     twitter: "https://twitter.com",
     email: "sneha@techtide.co",
   },
+  {
+    id: "wade-warren",
+    name: "Wade Warren",
+    role: "Marketing Coordinator",
+    bio: "Strategic marketing professional with 8+ years driving digital growth.",
+    image: "/assets/branding-strategy-marketing-business-graphic-design.webp",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    email: "wade@techtide.co",
+  },
+  {
+    id: "bessie-cooper",
+    name: "Bessie Cooper",
+    role: "Web Designer",
+    bio: "Award-winning UI/UX designer crafting beautiful, user-centric interfaces.",
+    image: "/assets/businesswoman-working-laptop.jpg (1).webp",
+    linkedin: "https://linkedin.com",
+    twitter: "https://twitter.com",
+    email: "bessie@techtide.co",
+  },
 ];
 
 export const TestimonialsData = [
@@ -260,14 +280,17 @@ export const TestimonialsData = [
 ];
 
 export const TechStackData = [
-  { name: "Next.js 16", icon: "/assets/next.js-logo.svg", category: "Frontend & SSR" },
-  { name: "React 19", icon: "/assets/react-logo.svg", category: "UI Library" },
+  { name: "React", icon: "/assets/react-logo.svg", category: "UI Library" },
+  { name: "Next.js", icon: "/assets/next.js-logo.svg", category: "Frontend & SSR" },
+  { name: "WordPress", icon: "/assets/wordpress-logo.svg", category: "CMS" },
+  { name: "MongoDB", icon: "/assets/mongodb-logo.svg", category: "Database" },
+  { name: "Express.js", icon: "/assets/express-js-logo.svg", category: "Backend Framework" },
   { name: "Node.js", icon: "/assets/nodejs-logo.svg", category: "Backend Runtime" },
   { name: "TypeScript", icon: "/assets/typescript-logo.svg", category: "Type Safety" },
-  { name: "MongoDB", icon: "/assets/mongodb-logo.svg", category: "Database" },
-  { name: "AWS Cloud", icon: "/assets/aws-logo.svg", category: "Infrastructure" },
-  { name: "Claude AI", icon: "/assets/claude-ai-logo.svg", category: "AI & LLMs" },
+  { name: "AWS", icon: "/assets/aws-logo.svg", category: "Infrastructure" },
+  { name: "Claude", icon: "/assets/claude-ai-logo.svg", category: "AI & LLMs" },
   { name: "Stripe", icon: "/assets/stripe-logo.svg", category: "Payments" },
+  { name: "React Native", icon: "/assets/react-native-logo.svg", category: "Mobile Apps" },
 ];
 
 export const HowWeWorkData = [

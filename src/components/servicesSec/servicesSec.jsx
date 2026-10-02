@@ -43,7 +43,7 @@ export default function ServicesSec() {
             return (
               <div
                 key={service.id}
-                className="bg-black border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all group shadow-xl"
+                className="bg-black border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:border-primary/50 transition-all group shadow-xl"
               >
                 <div className="space-y-4">
                   <div className="relative h-48 w-full rounded-xl overflow-hidden mb-4">
@@ -53,27 +53,14 @@ export default function ServicesSec() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-3 left-3 p-2.5 rounded-xl bg-black/80 backdrop-blur-md text-primary border border-white/10">
+                    <div className="absolute top-3 left-3 p-2.5 rounded-lg bg-black/80 backdrop-blur-md text-primary border border-white/10">
                       <IconComponent size={22} weight="bold" />
                     </div>
                   </div>
 
-                  <h3 className="heading-h4 text-white group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
+                  <h3 className="heading-h4 text-white duration-300 group-hover:text-primary">{service.title}</h3>
 
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    {service.shortDesc}
-                  </p>
-
-                  <ul className="space-y-2 pt-2 border-t border-white/10">
-                    {service.features.slice(0, 3).map((feat, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-white/70">
-                        <CheckCircleIcon size={14} className="text-primary shrink-0" weight="fill" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-sm text-white/70 leading-relaxed">{service.shortDesc}</p>
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-white/10">
@@ -81,7 +68,7 @@ export default function ServicesSec() {
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-white transition-colors group/link"
                   >
-                    <span>Learn More & Pricing</span>
+                    <span>Learn More</span>
                     <ArrowRightIcon size={16} className="group-hover/link:translate-x-1 transition-transform" weight="bold" />
                   </Link>
                 </div>

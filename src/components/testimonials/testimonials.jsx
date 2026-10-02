@@ -1,25 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import { TestimonialsData } from "@/Data";
-import { QuotesIcon, StarIcon, CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
+import { QuotesIcon } from "@phosphor-icons/react/dist/ssr";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev === 0 ? TestimonialsData.length - 1 : prev - 1));
-  };
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev === TestimonialsData.length - 1 ? 0 : prev + 1));
-  };
-
-  const current = TestimonialsData[currentIndex] || TestimonialsData[0];
-
   return (
-    <section className="py-20 bg-tint-black-2 border-y border-white/10 relative overflow-hidden">
-      <div className="container relative z-10">
+    <section className="py-24 bg-tint-black relative overflow-hidden">
+      <div className="container-fluid relative z-10">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
             Client Success Stories
@@ -32,48 +24,51 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-black border border-white/10 rounded-2xl p-8 lg:p-12 relative shadow-2xl">
-            <QuotesIcon size={48} className="text-primary/30 mb-6" weight="fill" />
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={1}
+          spaceBetween={24}
+          loop={true}
+          speed={700}
+          autoplay={{ delay: 4500, disableOnInteraction: false }}
+          pagination={{ clickable: true, el: ".testimonial-pagination" }}
+          breakpoints={{
+            640: { slidesPerView: 1, spaceBetween: 24 },
+            768: { slidesPerView: 2, spaceBetween: 24 },
+            1024: { slidesPerView: 3, spaceBetween: 28 },
+          }}
+          className="!pb-14"
+        >
+          {TestimonialsData.map((item, idx) => (
+            <SwiperSlide key={item.id || idx} className="!h-auto">
+              <TestimonialCard item={item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-            <div className="space-y-6">
-              <div className="flex gap-1 text-amber-400">
-                {[...Array(current.rating)].map((_, i) => (
-                  <StarIcon key={i} size={20} weight="fill" />
-                ))}
-              </div>
-
-              <p className="text-lg md:text-xl text-white font-medium leading-relaxed italic">
-                "{current.quote}"
-              </p>
-
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                <div>
-                  <div className="text-base font-bold text-white">{current.author}</div>
-                  <div className="text-xs text-white/60">{current.role}</div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={prevTestimonial}
-                    className="p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-primary hover:border-primary/50 transition-all"
-                    aria-label="Previous testimonial"
-                  >
-                    <CaretLeftIcon size={20} weight="bold" />
-                  </button>
-                  <button
-                    onClick={nextTestimonial}
-                    className="p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-primary hover:border-primary/50 transition-all"
-                    aria-label="Next testimonial"
-                  >
-                    <CaretRightIcon size={20} weight="bold" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="testimonial-pagination flex justify-center gap-2 mt-2 [&_.swiper-pagination-bullet]:bg-white/20 [&_.swiper-pagination-bullet]:w-2 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-pagination-bullet-active]:w-6 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300" />
       </div>
     </section>
+  );
+}
+
+function TestimonialCard({ item }) {
+  return (
+    <article className="h-full bg-tint-black-2 border border-white/8 rounded-2xl p-7 flex flex-col gap-5 hover:border-primary/25 transition-all duration-300 group">
+      <QuotesIcon
+        size={44}
+        weight="fill"
+        className="text-primary/80 shrink-0 -mb-2 rotate-180"
+      />
+
+      <p className="text-base text-white/85 leading-relaxed flex-1">&ldquo;{item.quote}&rdquo;</p>
+
+      <div className="border-t border-white/8 pt-5">
+        <div className="space-y-0.5">
+          <div className="text-base font-bold text-white">{item.author}</div>
+          <div className="text-xs text-white/55">{item.role}</div>
+        </div>
+      </div>
+    </article>
   );
 }
