@@ -12,7 +12,6 @@ import {
   MapPinIcon,
   PaperPlaneTiltIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
 } from "@phosphor-icons/react";
 
 export default function Footer() {
@@ -29,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="relative z-10 bg-tint-black-2 border-t border-white/10 pt-16 pb-8 text-white/80">
       <div className="container">
-        <div className="bg-gradient-to-r from-tint-black-tint to-tint-black-2 border border-white/10 rounded-2xl p-8 lg:p-12 mb-16 shadow-2xl relative overflow-hidden">
+        {/* <div className="bg-gradient-to-r from-tint-black-tint to-tint-black-2 border border-white/10 rounded-2xl p-8 lg:p-12 mb-16 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7">
@@ -72,7 +71,7 @@ export default function Footer() {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-2 space-y-4">
@@ -123,33 +122,33 @@ export default function Footer() {
             <h4 className="heading-h6 text-white font-semibold">Quick Links</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/about" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> About Us
+                <Link href="/about" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> About Us
                 </Link>
               </li>
               <li>
-                <Link href="/company-profile" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Company Profile
+                <Link href="/company-profile" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Company Profile
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Products
+                <Link href="/products" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Products
                 </Link>
               </li>
               <li>
-                <Link href="/career" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Careers
+                <Link href="/career" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Tech Blog
+                <Link href="/blog" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Tech Blog
                 </Link>
               </li>
               <li>
-                <Link href="/appointment" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Book Strategy Call
+                <Link href="/appointment" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Book Strategy Call
                 </Link>
               </li>
             </ul>
@@ -159,33 +158,33 @@ export default function Footer() {
             <h4 className="heading-h6 text-white font-semibold">Our Services</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/services/web-development" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Web Software
+                <Link href="/services/web-development" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Web Software
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-apps" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Mobile Apps
+                <Link href="/services/mobile-apps" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Mobile Apps
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-automation" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> AI & Automation
+                <Link href="/services/ai-automation" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> AI & Automation
                 </Link>
               </li>
               <li>
-                <Link href="/services/saas-engineering" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> SaaS Solutions
+                <Link href="/services/saas-engineering" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> SaaS Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-infrastructure" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Cloud & DevOps
+                <Link href="/services/cloud-infrastructure" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Cloud & DevOps
                 </Link>
               </li>
               <li>
-                <Link href="/services/seo-marketing" className="hover:text-primary duration-300 flex items-center gap-1.5">
-                  <ArrowRightIcon size={12} className="text-primary" /> Growth Marketing
+                <Link href="/services/seo-marketing" className="group/link hover:text-primary duration-300 flex items-center gap-2">
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Growth Marketing
                 </Link>
               </li>
             </ul>
@@ -195,17 +194,17 @@ export default function Footer() {
             <h4 className="heading-h6 text-white font-semibold">Contact Info</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
-                <MapPinIcon size={18} className="text-primary shrink-0 mt-0.5" weight="bold" />
+                <MapPinIcon size={20} className="text-primary shrink-0 mt-0.5" weight="bold" />
                 <span className="text-white/70">Pan India & Global Remote Operations</span>
               </li>
               <li className="flex items-center gap-3">
-                <EnvelopeSimpleIcon size={18} className="text-primary shrink-0" weight="bold" />
+                <EnvelopeSimpleIcon size={20} className="text-primary shrink-0" weight="bold" />
                 <Link href="mailto:contact@techtide.co" className="text-white/70 hover:text-primary duration-300">
                   contact@techtide.co
                 </Link>
               </li>
               <li className="flex items-center gap-3">
-                <PhoneIcon size={18} className="text-primary shrink-0" weight="bold" />
+                <PhoneIcon size={20} className="text-primary shrink-0" weight="bold" />
                 <Link href="tel:+919876543210" className="text-white/70 hover:text-primary duration-300">
                   +91 (987) 654-3210
                 </Link>

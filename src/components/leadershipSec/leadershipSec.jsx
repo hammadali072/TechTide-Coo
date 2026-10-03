@@ -11,7 +11,7 @@ import clsx from "clsx";
 
 export default function LeadershipSec() {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section id="leadership" className="py-24 bg-black relative overflow-hidden">
       <div className="container relative z-10 mb-16">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">

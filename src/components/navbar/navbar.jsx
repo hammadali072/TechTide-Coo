@@ -93,61 +93,16 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-
               <li>
-                <div
-                  className="relative"
-                  onMouseEnter={() => setActiveDropdown("about")}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                <Link
+                  href="/about"
+                  className={clsx(
+                    "text-sm font-medium duration-300 hover:text-primary",
+                    pathname === "/about" ? "text-primary" : "text-white/80"
+                  )}
                 >
-                  <button
-                    className={clsx(
-                      "flex items-center gap-1.5 text-sm font-medium py-2 transition-colors hover:text-primary",
-                      pathname.startsWith("/about") || pathname.startsWith("/company-profile") || activeDropdown === "about"
-                        ? "text-primary"
-                        : "text-white/80"
-                    )}
-                  >
-                    About Us
-                    <CaretDownIcon
-                      size={14}
-                      className={clsx(
-                        "transition-transform duration-200",
-                        activeDropdown === "about" && "rotate-180 text-primary"
-                      )}
-                    />
-                  </button>
-
-                  <div className={clsx("absolute top-full left-1/2 -translate-x-1/2 pt-5 w-80 duration-300", activeDropdown === "about" ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-2")}>
-                    <div className="bg-black/70 border border-white/10 rounded-2xl p-3 shadow-2xl backdrop-blur-xl">
-                      <ul>
-                        {NavbarAboutData.map((item) => {
-                          const IconComp = iconMap[item.iconName] || BuildingsIcon;
-                          return (
-                            <li key={item.href}>
-                              <Link
-                                href={item.href}
-                                className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-white/5 transition-all group"
-                              >
-                                <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                                  <IconComp size={18} weight="bold" />
-                                </div>
-                                <div>
-                                  <div className="text-sm font-semibold text-white group-hover:text-primary transition-colors">
-                                    {item.title}
-                                  </div>
-                                  <div className="text-xs text-white/60 line-clamp-1 mt-0.5">
-                                    {item.desc}
-                                  </div>
-                                </div>
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                  About
+                </Link>
               </li>
 
               <li>
@@ -215,18 +170,6 @@ export default function Navbar() {
 
               <li>
                 <Link
-                  href="/products"
-                  className={clsx(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    pathname === "/products" ? "text-primary" : "text-white/80"
-                  )}
-                >
-                  Products
-                </Link>
-              </li>
-
-              <li>
-                <Link
                   href="/blog"
                   className={clsx(
                     "text-sm font-medium transition-colors hover:text-primary",
@@ -236,17 +179,7 @@ export default function Navbar() {
                   Blog
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/career"
-                  className={clsx(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    pathname.startsWith("/career") ? "text-primary" : "text-white/80"
-                  )}
-                >
-                  Careers
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/contact"
@@ -262,12 +195,13 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-4">
+
             <Link
-              href="/appointment"
+              href="/contact"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-sm font-semibold shadow-lg shadow-primary/25 hover:opacity-95 transition-all hover:scale-[1.02]"
             >
               <SparkleIcon size={16} weight="fill" />
-              <span>Book Consultation</span>
+              <span>Get in Touch</span>
             </Link>
 
             <button
@@ -355,24 +289,10 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/products"
-            className="text-base font-semibold text-white hover:text-primary transition-colors py-1"
-          >
-            Products
-          </Link>
-
-          <Link
             href="/blog"
             className="text-base font-semibold text-white hover:text-primary transition-colors py-1"
           >
             Blog
-          </Link>
-
-          <Link
-            href="/career"
-            className="text-base font-semibold text-white hover:text-primary transition-colors py-1"
-          >
-            Careers
           </Link>
 
           <Link
@@ -384,10 +304,10 @@ export default function Navbar() {
 
           <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <Link
-              href="/appointment"
+              href="/contact"
               className="w-full text-center py-3 rounded-xl bg-gradient-to-r from-primary-start to-primary-end text-white font-semibold shadow-lg"
             >
-              Book Consultation
+              Get in Touch
             </Link>
           </div>
         </div>

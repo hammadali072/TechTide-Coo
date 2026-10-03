@@ -171,40 +171,6 @@ export const BlogData = [
   },
 ];
 
-export const ProjectsData = [
-  {
-    id: "raynova-tech",
-    title: "Raynova Tech Cloud Platform",
-    category: "SaaS Engineering",
-    desc: "Multi-tenant cloud management platform built with Next.js static export & microservices backend.",
-    image: "/assets/raynova-tech.webp",
-    tags: ["Next.js", "Tailwind CSS", "AWS"],
-  },
-  {
-    id: "aura-commerce",
-    title: "Aura Commerce Storefront",
-    category: "Web & E-Commerce",
-    desc: "Headless e-commerce storefront delivering sub-second page loads and 45% higher checkout conversions.",
-    image: "/assets/aura-commerce.webp",
-    tags: ["Headless CMS", "Stripe", "GraphQL"],
-  },
-  {
-    id: "sereniva-ai",
-    title: "Sereniva Healthcare AI",
-    category: "AI & Automation",
-    desc: "Automated patient intake and records categorization powered by custom LLM agent pipelines.",
-    image: "/assets/sereniva.webp",
-    tags: ["AI Agents", "Python", "React Native"],
-  },
-  {
-    id: "nexus-portal",
-    title: "Nexus Enterprise Portal",
-    category: "Custom Software",
-    desc: "Internal enterprise portal managing real-time analytics, permissions, and automated reporting.",
-    image: "/assets/nexus.webp",
-    tags: ["React 19", "Node.js", "Docker"],
-  },
-];
 
 export const LeadershipData = [
   {
@@ -398,12 +364,6 @@ export const NavbarAboutData = [
     desc: "Learn about our journey, culture, and core mission.",
     href: "/about",
     iconName: "BuildingsIcon",
-  },
-  {
-    title: "Company Profile",
-    desc: "Legal details, global reach, and corporate structure.",
-    href: "/company-profile",
-    iconName: "TargetIcon",
   },
   {
     title: "Leadership Team",

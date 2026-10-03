@@ -7,7 +7,6 @@ import TechStackSec from "@/components/techStackSec/techStackSec";
 import HowWeWorkSec from "@/components/howWeWorkSec/howWeWorkSec";
 import Testimonials from "@/components/testimonials/testimonials";
 import LeadershipSec from "@/components/leadershipSec/leadershipSec";
-import ProjectsSec from "@/components/projectsSec/projectsSec";
 import BlogSec from "@/components/blogSec/blogSec";
 import SupportSec from "@/components/supportSec/supportSec";
 
@@ -23,7 +22,6 @@ export default function Home() {
       <HowWeWorkSec />
       <Testimonials />
       <LeadershipSec />
-      <ProjectsSec />
       <BlogSec />
       <SupportSec />
     </>
