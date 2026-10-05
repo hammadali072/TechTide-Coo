@@ -48,7 +48,7 @@ export default function ProblemSec() {
             <span className="text-gradient">Costing You</span> Business?
           </h2>
 
-          <p className="text-white/55 text-base leading-relaxed">A generic digital profile is a liability. We help you transition from being "just another option" to the only logical choice.</p>
+          <p className="text-white/55 text-base leading-relaxed">A generic digital profile is a liability. We help you transition from being &quot;just another option&quot; to the only logical choice.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

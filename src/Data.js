@@ -135,41 +135,295 @@ export const ServicesData = [
   },
 ];
 
+// Replace the existing `BlogData` export in src/Data.js with this block.
+// Optional helpers are included at the bottom.
+
 export const BlogData = [
   {
     slug: "nextjs-16-static-export-guide",
     title: "Why Next.js 16 Static Export Is The Ultimate Setup For Speed & SEO",
-    excerpt: "Explore how pre-rendering static HTML pages provides unmatched load performance, zero server downtime, and optimal search ranking.",
-    content: "Static site generation (SSG) in Next.js 16 combines pre-rendered HTML speed with rich interactive client components...",
+    excerpt:
+      "Explore how pre-rendering static HTML pages provides unmatched load performance, zero server downtime, and optimal search ranking.",
     date: "Sep 24, 2026",
     readTime: "5 min read",
     category: "Engineering",
     image: "/assets/SEO.webp",
     author: "Rohan Kapoor",
+    authorRole: "Managing Director & CEO",
+    authorBio:
+      "12+ years leading enterprise digital transformations and cloud architecture strategies.",
+    tags: ["Next.js", "Static Export", "Core Web Vitals", "SEO"],
+    keyTakeaways: [
+      "Static export ships pre-rendered HTML to a CDN, so there is no server to crash or scale.",
+      "Faster first paint and stable layouts directly improve Core Web Vitals and rankings.",
+      "Interactive pieces stay possible through small client components and external APIs.",
+      "Hosting costs drop sharply because you only pay for storage and bandwidth.",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Most marketing sites, company profiles and content hubs do not need a server rendering every request. They need to be fast, reliable and easy for search engines to understand. Next.js static export gives you exactly that: every page is built once, at deploy time, and served as plain files from a CDN.",
+      },
+      { type: "heading", id: "what-is-static-export", text: "What Static Export Actually Does", level: 2 },
+      {
+        type: "paragraph",
+        text: "When you set the output mode to export, the build step crawls your routes, renders each one to HTML, and writes the result to an output folder. Dynamic routes are expanded ahead of time using generateStaticParams, so a blog with fifty posts becomes fifty ready-made pages.",
+      },
+      {
+        type: "code",
+        language: "javascript",
+        code: "// next.config.mjs\nconst nextConfig = {\n  output: \"export\",\n  trailingSlash: true,\n  images: { unoptimized: true },\n};\n\nexport default nextConfig;",
+      },
+      {
+        type: "callout",
+        title: "Good to know",
+        text: "Static export has no runtime server. Features such as cookies, request headers, API routes and on-demand revalidation are unavailable, so plan forms and data fetching around external services.",
+      },
+      { type: "heading", id: "speed-and-core-web-vitals", text: "Speed and Core Web Vitals", level: 2 },
+      {
+        type: "paragraph",
+        text: "Because the HTML already exists, the browser receives meaningful content on the very first response. There is no waiting on database queries or server-side rendering, which keeps Time to First Byte tiny and Largest Contentful Paint predictable.",
+      },
+      {
+        type: "list",
+        style: "bullet",
+        items: [
+          "Time to First Byte is limited only by CDN edge latency.",
+          "Largest Contentful Paint improves when the hero image and text are in the initial HTML.",
+          "Cumulative Layout Shift stays low when image dimensions are declared up front.",
+          "JavaScript is limited to the components that truly need interactivity.",
+        ],
+      },
+      { type: "heading", id: "seo-advantages", text: "SEO Advantages You Get For Free", level: 2 },
+      {
+        type: "paragraph",
+        text: "Crawlers love complete HTML. Titles, descriptions, headings, structured data and internal links are all present without executing JavaScript, so indexing is faster and more reliable. Combined with per-page metadata, each URL becomes a clean, self-describing document.",
+      },
+      {
+        type: "quote",
+        text: "The fastest request is the one your server never has to handle.",
+        cite: "Rohan Kapoor, TechTide",
+      },
+      { type: "heading", id: "reliability-and-cost", text: "Reliability and Cost", level: 2 },
+      {
+        type: "paragraph",
+        text: "A static site has no application server to patch, scale or restart. Traffic spikes are absorbed by the CDN, and a failed deploy simply leaves the previous version live. For most business sites this removes an entire category of incidents and cuts hosting bills dramatically.",
+      },
+      { type: "heading", id: "keeping-it-interactive", text: "Keeping It Interactive", level: 2 },
+      {
+        type: "paragraph",
+        text: "Static does not mean lifeless. Mark only the interactive parts as client components, such as carousels, accordions and forms, and send data to a CRM, email service or serverless endpoint.",
+      },
+      {
+        type: "list",
+        style: "number",
+        items: [
+          "Keep pages as server components and render them at build time.",
+          "Add use client only to components that need state or browser APIs.",
+          "Post forms to an external endpoint through an environment variable.",
+          "Rebuild and redeploy when content changes, or trigger builds from a CMS webhook.",
+        ],
+      },
+      { type: "heading", id: "when-not-to-use-it", text: "When Not To Use It", level: 2 },
+      {
+        type: "paragraph",
+        text: "If your product depends on per-user pages, real-time data or frequent content edits by non-technical teams without a build pipeline, a hybrid or server-rendered setup is the better fit. For marketing sites, documentation and blogs, static export is hard to beat.",
+      },
+    ],
+    relatedSlugs: [
+      "saas-multi-tenant-database-architecture",
+      "building-ai-agents-for-enterprise-workflows",
+    ],
   },
   {
     slug: "building-ai-agents-for-enterprise-workflows",
     title: "How Enterprise Companies Are Saving 100+ Hours With Custom AI Agents",
-    excerpt: "A practical breakdown of integrating LLM workflows, automated data extraction, and CRM webhooks for corporate teams.",
-    content: "Custom AI agents automate routine enterprise tasks ranging from lead scoring to automated email response engines...",
+    excerpt:
+      "A practical breakdown of integrating LLM workflows, automated data extraction, and CRM webhooks for corporate teams.",
     date: "Sep 18, 2026",
     readTime: "7 min read",
     category: "AI & Automation",
     image: "/assets/Automation.webp",
     author: "Sneha Reddi",
+    authorRole: "Chief Technology Officer",
+    authorBio:
+      "Former Principal Architect specializing in full-stack Next.js systems, AI automation & cloud DevOps.",
+    tags: ["AI Agents", "LLM", "Automation", "CRM"],
+    keyTakeaways: [
+      "Start with one repetitive, rules-heavy workflow rather than a general assistant.",
+      "Combine an LLM with structured tools, validation and human approval for reliability.",
+      "Webhooks connect agents to CRMs, inboxes and internal systems without manual steps.",
+      "Measure hours saved and error rates from day one to prove ROI.",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Enterprise teams spend a surprising share of their week copying data between tools, triaging inboxes and qualifying leads. Custom AI agents turn those repeatable tasks into background workflows, giving people their time back for work that needs judgement.",
+      },
+      { type: "heading", id: "what-is-an-ai-agent", text: "What An AI Agent Really Is", level: 2 },
+      {
+        type: "paragraph",
+        text: "An agent is more than a chatbot. It is a language model wrapped with tools it can call, rules it must follow and memory of the task at hand. It reads an input, decides which action to take, executes it through an API, and checks the result before moving on.",
+      },
+      { type: "heading", id: "high-value-use-cases", text: "High-Value Use Cases", level: 2 },
+      {
+        type: "list",
+        style: "bullet",
+        items: [
+          "Lead scoring and routing based on form answers and company data.",
+          "Automated first-response emails with human review for edge cases.",
+          "Document processing: invoices, contracts and onboarding forms.",
+          "Support triage that tags, summarizes and escalates tickets.",
+          "Web data extraction that feeds clean records into the CRM.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Pick one workflow first",
+        text: "Teams that launch a single, well-scoped agent usually see value in weeks. Teams that start with a do-everything assistant tend to stall on accuracy and trust.",
+      },
+      { type: "heading", id: "reference-architecture", text: "A Reference Architecture", level: 2 },
+      {
+        type: "paragraph",
+        text: "A dependable setup has four layers: a trigger such as a webhook or schedule, an orchestration layer that manages steps and retries, the model with a clear system prompt and tool definitions, and an output layer that writes to the CRM, database or inbox.",
+      },
+      {
+        type: "code",
+        language: "javascript",
+        code: "// Simplified webhook handler\nexport async function handleNewLead(payload) {\n  const lead = validate(payload);          // schema check\n  const score = await agent.scoreLead(lead); // LLM + tools\n  if (score.confidence < 0.7) {\n    return queueForHumanReview(lead, score);\n  }\n  await crm.updateLead(lead.id, { score: score.value });\n}",
+      },
+      { type: "heading", id: "reliability-and-guardrails", text: "Reliability and Guardrails", level: 2 },
+      {
+        type: "paragraph",
+        text: "Production agents need guardrails. Validate inputs and outputs against schemas, log every decision, limit which tools each agent may call, and route low-confidence results to a person. These controls are what separate a demo from a system your team trusts.",
+      },
+      {
+        type: "quote",
+        text: "Automation earns trust when every action is explainable and reversible.",
+        cite: "Sneha Reddi, TechTide",
+      },
+      { type: "heading", id: "measuring-roi", text: "Measuring ROI", level: 2 },
+      {
+        type: "list",
+        style: "number",
+        items: [
+          "Baseline the manual process: hours per week and error rate.",
+          "Track tasks completed automatically versus escalated.",
+          "Compare turnaround time before and after deployment.",
+          "Review monthly and expand to the next workflow.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Across the teams we work with, consolidating even three or four repetitive workflows routinely frees well over a hundred hours a month, with faster response times as a welcome side effect.",
+      },
+    ],
+    relatedSlugs: [
+      "nextjs-16-static-export-guide",
+      "saas-multi-tenant-database-architecture",
+    ],
   },
   {
     slug: "saas-multi-tenant-database-architecture",
     title: "Architecting Multi-Tenant SaaS Systems For Scale & Security",
-    excerpt: "Key design patterns for database isolation, role-based access control (RBAC), and subscription metering in modern web software.",
-    content: "Multi-tenant database architectures ensure privacy and security while keeping infrastructure costs manageable...",
+    excerpt:
+      "Key design patterns for database isolation, role-based access control (RBAC), and subscription metering in modern web software.",
     date: "Sep 10, 2026",
     readTime: "6 min read",
     category: "SaaS",
     image: "/assets/Dashboard-Growth.webp",
     author: "Rohan Kapoor",
+    authorRole: "Managing Director & CEO",
+    authorBio:
+      "12+ years leading enterprise digital transformations and cloud architecture strategies.",
+    tags: ["SaaS", "Multi-Tenancy", "RBAC", "Billing"],
+    keyTakeaways: [
+      "Choose a tenancy model early; it shapes cost, security and migration effort.",
+      "Enforce tenant isolation in the data layer, not only in application code.",
+      "Model roles and permissions separately from users for flexible RBAC.",
+      "Meter usage at the event level so billing stays accurate as you scale.",
+    ],
+    content: [
+      {
+        type: "paragraph",
+        text: "Multi-tenancy lets one application serve many customers while keeping their data separate. Done well, it lowers infrastructure cost and speeds up releases. Done poorly, it creates data leaks and painful migrations. These are the decisions that matter most.",
+      },
+      { type: "heading", id: "choosing-a-tenancy-model", text: "Choosing a Tenancy Model", level: 2 },
+      {
+        type: "paragraph",
+        text: "There are three common approaches, each balancing isolation against cost and operational complexity.",
+      },
+      {
+        type: "list",
+        style: "bullet",
+        items: [
+          "Shared database, shared schema: every row carries a tenant identifier. Cheapest and simplest to scale, but isolation relies on discipline.",
+          "Shared database, separate schemas: stronger separation with moderate overhead, useful for mid-sized customers.",
+          "Separate database per tenant: maximum isolation and easy per-customer backup, at higher cost and operational load.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Rule of thumb",
+        text: "Start with a shared schema and a tenant_id on every table, and design so that high-value enterprise tenants can later be moved to dedicated databases.",
+      },
+      { type: "heading", id: "enforcing-isolation", text: "Enforcing Tenant Isolation", level: 2 },
+      {
+        type: "paragraph",
+        text: "Never trust every query to remember the tenant filter. Push enforcement down into the database with row-level security or a data-access layer that injects the tenant context automatically. Add automated tests that attempt cross-tenant reads and must fail.",
+      },
+      {
+        type: "code",
+        language: "sql",
+        code: "-- PostgreSQL row-level security example\nALTER TABLE projects ENABLE ROW LEVEL SECURITY;\n\nCREATE POLICY tenant_isolation ON projects\n  USING (tenant_id = current_setting('app.tenant_id')::uuid);",
+      },
+      { type: "heading", id: "rbac-design", text: "Role-Based Access Control", level: 2 },
+      {
+        type: "paragraph",
+        text: "Keep users, roles and permissions as separate concepts. Users hold roles within a tenant, roles bundle permissions, and permissions describe actions on resources. This makes it simple to add custom roles for enterprise customers without changing code.",
+      },
+      {
+        type: "list",
+        style: "number",
+        items: [
+          "Define permissions as verbs on resources, such as invoice.read or member.invite.",
+          "Group permissions into roles like Owner, Admin, Member and Viewer.",
+          "Scope role assignments to a tenant so one user can have different roles in different organizations.",
+          "Check permissions on the server for every sensitive action.",
+        ],
+      },
+      { type: "heading", id: "subscription-metering", text: "Subscription Metering and Billing", level: 2 },
+      {
+        type: "paragraph",
+        text: "Usage-based pricing needs trustworthy numbers. Record usage as immutable events, aggregate them per billing period, and sync totals to your payment provider. Keep plan limits in configuration so product and sales teams can adjust packages without a deploy.",
+      },
+      {
+        type: "quote",
+        text: "If you cannot explain an invoice line from raw events, your metering is not finished.",
+        cite: "Rohan Kapoor, TechTide",
+      },
+      { type: "heading", id: "scaling-and-observability", text: "Scaling and Observability", level: 2 },
+      {
+        type: "paragraph",
+        text: "Watch for noisy neighbours: one heavy tenant slowing everyone else. Add per-tenant rate limits, query timeouts and dashboards that break metrics down by tenant. These signals tell you when it is time to shard or move a customer to dedicated resources.",
+      },
+    ],
+    relatedSlugs: [
+      "building-ai-agents-for-enterprise-workflows",
+      "nextjs-16-static-export-guide",
+    ],
   },
 ];
+
+// ---- Optional helpers (place in src/lib/blog.js or below BlogData) ----
+
+export const getPostBySlug = (slug) => BlogData.find((p) => p.slug === slug);
+
+export const getRelatedPosts = (post, limit = 3) =>
+  (post.relatedSlugs || [])
+    .map((s) => BlogData.find((p) => p.slug === s))
+    .filter(Boolean)
+    .slice(0, limit);
 
 
 export const LeadershipData = [

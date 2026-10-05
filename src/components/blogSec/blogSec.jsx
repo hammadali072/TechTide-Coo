@@ -6,6 +6,7 @@ import {
   CalendarBlankIcon,
   ArrowRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import BlogCard from "../blogCard/blogCard";
 
 export default function BlogSec() {
   return (
@@ -43,50 +44,4 @@ export default function BlogSec() {
   );
 }
 
-function BlogCard({ item }) {
-  return (
-    <article className="group bg-tint-black-2 rounded-2xl xl:py-5 xl:pb-6 xl:px-5 p-4 border border-white/8 hover:border-primary/30 shadow-lg hover:shadow-primary/10 hover:-translate-y-2 duration-300">
-      <div className="relative">
-        <Link href={`/blog/${item.slug}`} className="relative inline-block w-full h-full aspect-[4/2.5] rounded-xl overflow-hidden">
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover group-hover:scale-110 duration-500"
-          />
-          <div className="absolute inset-x-0 bottom-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent" />
-        </Link>
-
-        <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 w-[86%] z-10">
-          <ul className="flex justify-between items-center gap-2 bg-tint-black/80 border border-white/10 shadow-md shadow-black/50 backdrop-blur-md rounded-lg px-5 py-3">
-            <li className="flex items-center gap-2">
-              <UserIcon size={18} weight="bold" className="text-primary shrink-0" />
-              <span className="text-white/70 text-sm font-regular truncate">Admin</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <CalendarBlankIcon size={18} weight="bold" className="text-primary shrink-0" />
-              <span className="text-white/70 text-sm font-regular whitespace-nowrap">{item.date}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="pt-10 text-center flex flex-col items-center gap-4">
-        <Link
-          href={`/blog/${item.slug}`}
-          className="heading-h5 text-white leading-snug hover:text-primary duration-200 line-clamp-3"
-        >
-          {item.title}
-        </Link>
-
-        <Link
-          href={`/blog/${item.slug}`}
-          className="inline-flex items-center gap-2 text-base font-semibold uppercase text-white/50 hover:text-primary duration-200"
-        >
-          Read More
-          <ArrowRightIcon size={18} weight="bold" />
-        </Link>
-      </div>
-    </article>
-  );
-}
+// BlogCard moved to src/components/blogCard/blogCard.jsx
