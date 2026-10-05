@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { BlogData, getPostBySlug } from "@/Data";
 import BlogDetailHeroSec from "@/components/blogDetailHeroSec/blogDetailHeroSec";
 import BlogArticle from "@/components/blogArticle/blogArticle";
-import ReadingProgress from "@/components/blogArticle/readingProgress";
 import RelatedPostsSec from "@/components/relatedPostsSec/relatedPostsSec";
 
 export const dynamicParams = false;
@@ -58,7 +57,6 @@ export default async function BlogDetail({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ReadingProgress />
       <main>
         <BlogDetailHeroSec blog={post} />
         <BlogArticle blog={post} />

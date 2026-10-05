@@ -1,0 +1,13 @@
+import { LegalPagesData } from "@/lib/legal";
+import LegalPageLayout from "@/components/legalPageLayout/legalPageLayout";
+
+export const metadata = {
+  title: "Privacy Policy | TechTide Corporate LLP",
+  description: "Learn how we collect, use, and protect your personal information when you interact with our website and services.",
+  robots: { index: true, follow: true },
+};
+
+export default function PrivacyPolicyPage() {
+  const pageData = LegalPagesData["privacy-policy"];
+  return <LegalPageLayout page={pageData} />;
+}

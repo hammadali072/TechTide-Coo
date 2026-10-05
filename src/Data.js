@@ -10,6 +10,12 @@ export const ServicesData = [
     fullDesc: "We build scalable, secure, and resilient web software designed for high traffic and enterprise performance. From modern headless web platforms to complex internal business portals, our engineering team ensures lightning-fast load speeds, SEO optimization, and seamless user experiences.",
     icon: "CodeIcon",
     image: "/assets/Api.webp",
+    tagline: "High-performance full-stack web applications engineered for sub-second speed, SEO, and enterprise scalability.",
+    stats: [
+      { value: "4x", label: "Faster page loads" },
+      { value: "99.9%", label: "Uptime guarantee" },
+      { value: "<1s", label: "Average Core Web Vitals" },
+    ],
     features: [
       "Next.js SSG & App Router Architecture",
       "Headless CMS Integration (Sanity, Strapi)",
@@ -22,6 +28,77 @@ export const ServicesData = [
       "99.9% application uptime guarantee",
       "Higher Google search rankings & organic conversions",
     ],
+    benefits: [
+      {
+        icon: "LightningIcon",
+        title: "Sub-Second Performance",
+        desc: "Serverless edge rendering and optimized asset delivery for instant interactions and higher conversions.",
+      },
+      {
+        icon: "ShieldCheckIcon",
+        title: "Enterprise Grade Security",
+        desc: "Rigorous input sanitization, OWASP compliance, and zero-trust authentication workflows.",
+      },
+      {
+        icon: "ArrowsClockwiseIcon",
+        title: "Headless CMS Agility",
+        desc: "Editorial teams publish freely through Sanity or Strapi without requiring developer deployments.",
+      },
+      {
+        icon: "ChartLineUpIcon",
+        title: "Search Engine Dominance",
+        desc: "Engineered from the ground up with structured schema validation and high organic indexation.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "Architecture & Discovery",
+        desc: "We audit domain requirements, map user flows, and plan the tech stack, API boundaries, and database schema.",
+      },
+      {
+        num: "02",
+        title: "UI/UX & Component System",
+        desc: "Interactive Figma design systems converted into responsive, accessible, atomic Tailwind CSS components.",
+      },
+      {
+        num: "03",
+        title: "Full-Stack Engineering",
+        desc: "Next.js App Router implementation with type-safe APIs, caching layers, and automated unit testing.",
+      },
+      {
+        num: "04",
+        title: "Deployment & Optimization",
+        desc: "Staging rollout, Lighthouse 95+ performance tuning, automated CI/CD pipeline, and zero-downtime DNS cutover.",
+      },
+    ],
+    deliverables: [
+      "Full production source code & Git repository",
+      "Headless CMS configured with custom content models",
+      "Production deployment pipeline on Vercel or AWS",
+      "Core Web Vitals & technical SEO compliance audit",
+      "Architecture documentation & engineering handover",
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Sanity CMS"],
+    faqs: [
+      {
+        question: "How long does a custom web engineering project typically take?",
+        answer: "Most production web applications are delivered in 6 to 12 weeks depending on scope, third-party integrations, and whether a headless CMS or custom backend is required.",
+      },
+      {
+        question: "Can you modernize or rebuild an existing legacy website?",
+        answer: "Yes. We frequently migrate legacy WordPress, PHP, or monolithic systems into modern Next.js and headless stacks while preserving all existing SEO equity and URLs.",
+      },
+      {
+        question: "How do you ensure sub-second page load times?",
+        answer: "We utilize static generation (SSG), server-side rendering at the edge, WebP image compression, automated asset bundling, and minimal third-party script overhead.",
+      },
+      {
+        question: "Do we retain full ownership of the source code?",
+        answer: "100%. Upon project completion, all intellectual property, Git repositories, designs, and deployment credentials belong entirely to your company.",
+      },
+    ],
+    relatedSlugs: ["saas-engineering", "mobile-apps", "cloud-infrastructure"],
   },
   {
     id: "mobile-apps",
@@ -32,6 +109,12 @@ export const ServicesData = [
     fullDesc: "Reach your users on mobile with native-grade iOS and Android apps built with React Native and Flutter. We craft intuitive user interfaces, secure biometric authentication, offline synchronization, and push notification ecosystems.",
     icon: "DeviceMobileIcon",
     image: "/assets/lead-generation-service-in-pan-india-digital-marketing-1000x1000.webp",
+    tagline: "Native-grade iOS & Android applications engineered for fluid 60 FPS performance and offline reliability.",
+    stats: [
+      { value: "40%", label: "Development cost saved" },
+      { value: "4.8+", label: "App Store design rating" },
+      { value: "60 FPS", label: "Fluid frame rate standard" },
+    ],
     features: [
       "Single Codebase iOS & Android Apps",
       "Biometric Security & Encrypted Local Storage",
@@ -44,6 +127,77 @@ export const ServicesData = [
       "Reduced development cost by up to 40% with cross-platform build",
       "Seamless backend API integration",
     ],
+    benefits: [
+      {
+        icon: "DeviceMobileIcon",
+        title: "Single Codebase Velocity",
+        desc: "Build once and deploy seamlessly to both Apple App Store and Google Play Store without duplicate teams.",
+      },
+      {
+        icon: "LockKeyIcon",
+        title: "Biometric Security",
+        desc: "Hardware-backed FaceID, TouchID, and encrypted on-device keychain storage for sensitive credentials.",
+      },
+      {
+        icon: "ArrowsClockwiseIcon",
+        title: "Offline-First Sync",
+        desc: "Local SQLite storage ensuring uninterrupted user workflow even during patchy network connections.",
+      },
+      {
+        icon: "SparkleIcon",
+        title: "Push Notification Ecosystem",
+        desc: "Custom notification strategies and segmented automated triggers that dramatically lift user retention.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "Mobile UX Wireframing",
+        desc: "Platform-specific Human Interface Guidelines and Material Design wireframes optimized for thumb ergonomics.",
+      },
+      {
+        num: "02",
+        title: "Cross-Platform Build",
+        desc: "React Native engineering with native bridge bindings, state management, and smooth screen transitions.",
+      },
+      {
+        num: "03",
+        title: "Device & Stress Testing",
+        desc: "Rigorous testing across physical iOS and Android viewports, low-connectivity throttling, and memory profiles.",
+      },
+      {
+        num: "04",
+        title: "Store Submission & Launch",
+        desc: "Full management of Apple App Store Review and Google Play Console guidelines, certificates, and release tracks.",
+      },
+    ],
+    deliverables: [
+      "Compiled iOS (.ipa) & Android (.aab) binaries",
+      "Cross-platform React Native source repository",
+      "Store asset kit (icons, splash screens, privacy manifests)",
+      "Push notification service setup (Firebase/OneSignal)",
+      "Offline sync test suite & release documentation",
+    ],
+    technologies: ["React Native", "Flutter", "TypeScript", "Expo", "Firebase", "Redux Toolkit", "SQLite"],
+    faqs: [
+      {
+        question: "Should we build cross-platform or native iOS and Android apps?",
+        answer: "For over 90% of business and consumer applications, modern cross-platform frameworks like React Native deliver identical 60 FPS performance while cutting development and maintenance costs by 40%.",
+      },
+      {
+        question: "Do you handle the Apple App Store and Google Play Store submission?",
+        answer: "Yes. We manage certificates, privacy manifests, screenshots, app descriptions, and address any reviewer inquiries until your application is approved and live.",
+      },
+      {
+        question: "Can the app function when users lose internet connection?",
+        answer: "Yes. We design offline-first databases that cache user interactions locally and sync seamlessly with the backend once connectivity resumes.",
+      },
+      {
+        question: "How do you handle post-launch mobile updates?",
+        answer: "We support over-the-air (OTA) updates for JavaScript bundles so critical bug fixes and content updates can be pushed without waiting for app store review delays.",
+      },
+    ],
+    relatedSlugs: ["web-development", "saas-engineering", "cloud-infrastructure"],
   },
   {
     id: "ai-automation",
@@ -54,6 +208,12 @@ export const ServicesData = [
     fullDesc: "Transform manual business operations into automated digital workflows. We build custom AI assistants, automated document processors, customer support bots, and system-to-system integrations.",
     icon: "CpuIcon",
     image: "/assets/Automation.webp",
+    tagline: "Intelligent LLM pipelines, autonomous agent systems, and automated enterprise workflows.",
+    stats: [
+      { value: "70%", label: "Manual task reduction" },
+      { value: "24/7", label: "Autonomous response time" },
+      { value: "10x", label: "Data extraction speed" },
+    ],
     features: [
       "Custom RAG & Enterprise Search Pipelines",
       "LLM Agent Integration (OpenAI, Claude, Llama)",
@@ -66,6 +226,77 @@ export const ServicesData = [
       "24/7 instant response customer support bots",
       "Accelerated sales pipeline processing",
     ],
+    benefits: [
+      {
+        icon: "RobotIcon",
+        title: "Enterprise RAG Pipelines",
+        desc: "Connect private corporate knowledge bases securely to leading LLMs without exposing confidential data.",
+      },
+      {
+        icon: "LightningIcon",
+        title: "Workflow Orchestration",
+        desc: "Eliminate repetitive paperwork, CRM data hygiene chores, and invoice reconciliation across departments.",
+      },
+      {
+        icon: "DatabaseIcon",
+        title: "Intelligent Data Extraction",
+        desc: "Extract structured data instantly from PDFs, emails, spreadsheets, and scanned receipts with high accuracy.",
+      },
+      {
+        icon: "ShieldCheckIcon",
+        title: "PII Redaction & Guardrails",
+        desc: "Strict compliance guardrails ensuring sensitive customer details and credentials never leak to public models.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "Operational Bottleneck Audit",
+        desc: "We analyze team time logs, identify repetitive manual bottlenecks, and calculate ROI for target workflows.",
+      },
+      {
+        num: "02",
+        title: "Pipeline & Agent Architecture",
+        desc: "Vector database indexing, context window optimization, and prompt engineering with evaluation benchmarks.",
+      },
+      {
+        num: "03",
+        title: "System Integration",
+        desc: "Connecting AI agents into your CRM, ERP, Slack, ticketing systems, and transactional databases.",
+      },
+      {
+        num: "04",
+        title: "Human-in-the-Loop Rollout",
+        desc: "Staged deployment with review interfaces, accuracy monitoring, and fallback routing for edge cases.",
+      },
+    ],
+    deliverables: [
+      "Production-ready AI agent or workflow pipeline",
+      "Vector database & embeddings configuration",
+      "Webhook & CRM integration connectors",
+      "Accuracy evaluation dataset & benchmark report",
+      "Operator manual and guardrail guidelines",
+    ],
+    technologies: ["Python", "LangChain", "OpenAI API", "Claude Anthropic", "Pinecone", "n8n", "FastAPI"],
+    faqs: [
+      {
+        question: "Is our proprietary company data used to train public AI models?",
+        answer: "Never. We use enterprise API agreements and self-hosted vector databases where zero customer data is retained or used for foundational model training.",
+      },
+      {
+        question: "What kind of tasks can be automated with AI workflows?",
+        answer: "Customer support triage, sales lead enrichment, invoice data extraction, document summarization, automated compliance checks, and cross-system database syncs.",
+      },
+      {
+        question: "How accurate are custom RAG and LLM systems?",
+        answer: "By grounding responses in your validated documentation and employing multi-step verification checks, we routinely achieve 95%+ precision on domain queries.",
+      },
+      {
+        question: "Can the automation connect to our existing tools?",
+        answer: "Yes. We connect with HubSpot, Salesforce, Slack, Notion, Airtable, Google Workspace, and any platform offering a REST API or webhook interface.",
+      },
+    ],
+    relatedSlugs: ["saas-engineering", "web-development", "cloud-infrastructure"],
   },
   {
     id: "saas-engineering",
@@ -76,6 +307,12 @@ export const ServicesData = [
     fullDesc: "Turn your product vision into a scalable enterprise SaaS. We architect multi-tenant databases, Stripe/Razorpay subscription engines, RBAC permission models, and analytics dashboards.",
     icon: "RocketLaunchIcon",
     image: "/assets/SAAS Image (1).webp",
+    tagline: "End-to-end multi-tenant SaaS architecture engineered to scale from MVP to thousands of paying accounts.",
+    stats: [
+      { value: "8-12 wks", label: "MVP launch timeline" },
+      { value: "100k+", label: "Concurrent user scale" },
+      { value: "SOC2", label: "Security compliance standard" },
+    ],
     features: [
       "Multi-tenant Database Architecture",
       "Stripe & International Payment Gateways",
@@ -88,6 +325,77 @@ export const ServicesData = [
       "Scalable infrastructure ready for 100k+ active users",
       "Enterprise SOC2-ready security patterns",
     ],
+    benefits: [
+      {
+        icon: "RocketLaunchIcon",
+        title: "Multi-Tenant Isolation",
+        desc: "Robust data partitioning, schema isolation, and tenant-scoped security controls protecting customer data.",
+      },
+      {
+        icon: "LockKeyIcon",
+        title: "Complex Billing Models",
+        desc: "Seat-based, usage-metered, and tiered subscription billing powered by Stripe with customer self-serve portals.",
+      },
+      {
+        icon: "UsersThreeIcon",
+        title: "Granular RBAC",
+        desc: "Enterprise role permissions, invite flows, team workspaces, and SSO / SAML readiness for high-ACV deals.",
+      },
+      {
+        icon: "ChartLineUpIcon",
+        title: "Real-Time Telemetry",
+        desc: "Built-in user analytics, churn telemetry, revenue metrics, and super-admin management dashboards.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "SaaS Product Blueprint",
+        desc: "Specification of pricing tiers, data partitioning strategy, user roles, and core product journey wireframes.",
+      },
+      {
+        num: "02",
+        title: "Foundation & Auth Setup",
+        desc: "Multi-tenant auth, workspace scoping, database indexing, and Stripe webhook infrastructure.",
+      },
+      {
+        num: "03",
+        title: "Core Feature Engineering",
+        desc: "Rapid sprint-based delivery of domain features, background task queues, and team collaboration tools.",
+      },
+      {
+        num: "04",
+        title: "Launch & Load Testing",
+        desc: "Automated test suites, simulated concurrency stress testing, monitoring setup, and production launch.",
+      },
+    ],
+    deliverables: [
+      "Complete multi-tenant SaaS codebase",
+      "Stripe subscription & customer portal integration",
+      "Super-admin dashboard & tenant management portal",
+      "Database migration scripts & seed factories",
+      "Production deployment on auto-scaling cloud",
+    ],
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Stripe", "Redis", "Docker", "Tailwind CSS"],
+    faqs: [
+      {
+        question: "How fast can you build and launch an MVP SaaS product?",
+        answer: "Our standard MVP delivery timeline is 8 to 12 weeks. We prioritize core monetization features and user onboarding so you can validate with real paying customers quickly.",
+      },
+      {
+        question: "How do you handle multi-tenant data privacy?",
+        answer: "We employ tenant-isolated row-level security (RLS) and schema scoping so tenant data can never bleed across accounts, meeting enterprise compliance standards.",
+      },
+      {
+        question: "Can we support both recurring subscriptions and usage-based billing?",
+        answer: "Yes. We configure Stripe billing meters and webhooks to support flat-rate plans, per-seat pricing, and variable usage consumption with automated proration.",
+      },
+      {
+        question: "Is the architecture ready for high user traffic?",
+        answer: "Our SaaS architectures are built on stateless containers, Redis caching, and indexed PostgreSQL instances capable of supporting 100k+ active users effortlessly.",
+      },
+    ],
+    relatedSlugs: ["web-development", "cloud-infrastructure", "ai-automation"],
   },
   {
     id: "seo-marketing",
@@ -98,6 +406,12 @@ export const ServicesData = [
     fullDesc: "Dominate search results and convert organic traffic into qualified sales opportunities. Our technical SEO strategies combine schema optimization, keyword strategy, and landing page conversion design.",
     icon: "TrendUpIcon",
     image: "/assets/SEO Marketing.webp",
+    tagline: "Technical SEO audits, programmatic content infrastructure, and data-driven organic customer acquisition.",
+    stats: [
+      { value: "3x-5x", label: "Inbound lead increase" },
+      { value: "100%", label: "Technical SEO pass rate" },
+      { value: "Top 3", label: "Target search position" },
+    ],
     features: [
       "Full Technical SEO Audit & Remediation",
       "Programmatic SEO Page Generation",
@@ -110,16 +424,93 @@ export const ServicesData = [
       "Higher domain authority & search ranking",
       "Lower cost-per-acquisition (CPA)",
     ],
+    benefits: [
+      {
+        icon: "ChartLineUpIcon",
+        title: "Programmatic Landing Pages",
+        desc: "Safely scale your indexed footprint with high-quality templated landing pages and dynamic structured schema.",
+      },
+      {
+        icon: "LightningIcon",
+        title: "Technical Hygiene Fixes",
+        desc: "Crawl budget optimization, canonical resolution, internal link graph cleanup, and instant Google indexing.",
+      },
+      {
+        icon: "GraphIcon",
+        title: "Conversion Architecture",
+        desc: "Turn organic traffic into booked discovery calls with friction-free lead capture UX and trust elements.",
+      },
+      {
+        icon: "GlobeIcon",
+        title: "Competitor Displacement",
+        desc: "Identify and exploit high-intent search gaps where your company can systematically outrank incumbents.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "Technical & Content Audit",
+        desc: "Exhaustive crawl analysis identifying indexation blockers, thin content, broken links, and schema gaps.",
+      },
+      {
+        num: "02",
+        title: "Keyword & Intent Mapping",
+        desc: "Clustering commercial intent keywords and structuring optimal URL hierarchies and internal link maps.",
+      },
+      {
+        num: "03",
+        title: "On-Page & Schema Implementation",
+        desc: "Structured JSON-LD schema injection, metadata automation, semantic HTML fixes, and Core Web Vitals tuning.",
+      },
+      {
+        num: "04",
+        title: "Rank Tracking & Iteration",
+        desc: "Continuous monitoring via Google Search Console and analytics with quarterly growth reviews.",
+      },
+    ],
+    deliverables: [
+      "Comprehensive technical SEO diagnostic report",
+      "Clean JSON-LD schema implementation",
+      "Programmatic page generation templates",
+      "Target keyword map and content roadmap",
+      "Google Analytics 4 & Search Console configuration",
+    ],
+    technologies: ["Google Search Console", "Ahrefs", "Semrush", "Screaming Frog", "Schema.org", "Next.js SEO", "GA4"],
+    faqs: [
+      {
+        question: "How soon can we expect organic search ranking improvements?",
+        answer: "Technical fixes and indexation corrections often show positive crawl signals within 2 to 4 weeks, with significant organic traffic and keyword improvements scaling at the 3 to 6 month mark.",
+      },
+      {
+        question: "What is programmatic SEO?",
+        answer: "Programmatic SEO generates hundreds of unique, high-intent landing pages using structured databases (e.g. integrations, location pages, or industry solutions) that capture long-tail organic search volume.",
+      },
+      {
+        question: "How do you measure SEO success?",
+        answer: "We track organic impressions, top-10 keyword positions, organic CTR, and most importantly, qualified conversion events and form inquiries.",
+      },
+      {
+        question: "Do you also optimize existing blog posts and content?",
+        answer: "Yes. We perform content gap audits, update outdated statistics, optimize heading hierarchies, and insert high-value internal links to boost authority.",
+      },
+    ],
+    relatedSlugs: ["web-development", "saas-engineering", "mobile-apps"],
   },
   {
     id: "cloud-infrastructure",
     slug: "cloud-infrastructure",
     title: "Cloud Infrastructure & DevOps",
-    category: "Business Growth",
+    category: "Infrastructure",
     shortDesc: "Containerized deployments, serverless architecture, CI/CD pipelines, and 99.9% uptime SLA.",
     fullDesc: "Ensure your infrastructure is automated, cost-efficient, and bulletproof. We configure Docker, Kubernetes, Nginx, AWS, GCP, and automated CI/CD deployments for zero-downtime releases.",
     icon: "CloudIcon",
     image: "/assets/Ongoing Maintenance & Support.webp",
+    tagline: "Automated CI/CD pipelines, containerized orchestration, and cost-optimized cloud architectures.",
+    stats: [
+      { value: "99.9%", label: "Uptime SLA standard" },
+      { value: "30%", label: "Cloud spend reduction" },
+      { value: "0", label: "Downtime during deployments" },
+    ],
     features: [
       "Automated CI/CD Deployment Pipelines",
       "Docker & Kubernetes Container Orchestration",
@@ -132,6 +523,77 @@ export const ServicesData = [
       "Optimized cloud server bill by up to 30%",
       "Automated disaster recovery protocols",
     ],
+    benefits: [
+      {
+        icon: "CloudIcon",
+        title: "Zero-Downtime Releases",
+        desc: "Blue-green and canary deployment pipelines that release updates without disrupting active user sessions.",
+      },
+      {
+        icon: "ShieldCheckIcon",
+        title: "Hardened Security Bastion",
+        desc: "VPC network segmentation, TLS enforcement, WAF firewalls, and least-privilege IAM access policies.",
+      },
+      {
+        icon: "HardDrivesIcon",
+        title: "Container Orchestration",
+        desc: "Docker and Kubernetes setups that auto-scale during peak traffic surges and scale down during quiet hours.",
+      },
+      {
+        icon: "InfinityIcon",
+        title: "Disaster Recovery Protocols",
+        desc: "Automated database snapshotting, multi-region replication, and verified 15-minute recovery point objectives.",
+      },
+    ],
+    process: [
+      {
+        num: "01",
+        title: "Infrastructure & Security Audit",
+        desc: "Reviewing current topology, security vulnerabilities, single points of failure, and cloud billing waste.",
+      },
+      {
+        num: "02",
+        title: "IaC & Pipeline Design",
+        desc: "Codifying infrastructure with Terraform / Docker and designing GitHub Actions CI/CD workflows.",
+      },
+      {
+        num: "03",
+        title: "Zero-Downtime Migration",
+        desc: "Staged database replication, SSL provisioning, health checks, and zero-loss production traffic cutover.",
+      },
+      {
+        num: "04",
+        title: "Telemetry & SRE Setup",
+        desc: "Deploying Prometheus, Grafana, and automated alert thresholds for proactive incident prevention.",
+      },
+    ],
+    deliverables: [
+      "Infrastructure as Code (Terraform / Docker Compose)",
+      "Automated GitHub Actions CI/CD pipelines",
+      "Centralized logging and metrics dashboard",
+      "Hardened firewall and IAM configuration",
+      "Disaster recovery runbook and rollback plan",
+    ],
+    technologies: ["AWS", "Google Cloud", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Nginx", "PostgreSQL"],
+    faqs: [
+      {
+        question: "Can you help reduce our existing AWS or cloud hosting bill?",
+        answer: "Yes. Our cloud audits typically identify 20% to 35% in monthly savings by right-sizing instances, eliminating idle provisioned capacity, and implementing auto-scaling.",
+      },
+      {
+        question: "How do you achieve zero-downtime deployments?",
+        answer: "We use containerized blue-green and rolling deployments with health checks. New versions must pass internal verification before incoming traffic is routed to them.",
+      },
+      {
+        question: "Which cloud providers do you support?",
+        answer: "We have deep engineering experience with Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, DigitalOcean, and dedicated Hetzner clusters.",
+      },
+      {
+        question: "What happens if a server fails in the middle of the night?",
+        answer: "Our architectures feature self-healing auto-recovery where failed containers or nodes are instantly replaced, paired with 24/7 automated alerting to on-call engineers.",
+      },
+    ],
+    relatedSlugs: ["saas-engineering", "web-development", "ai-automation"],
   },
 ];
 
