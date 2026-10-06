@@ -63,7 +63,7 @@ function BlockRenderer({ block }) {
               </thead>
               <tbody className="divide-y divide-white/8">
                 {block.rows.map((row, i) => (
-                  <tr key={i} className="hover:bg-white/5 transition-colors">
+                  <tr key={i} className="hover:bg-white/5 duration-300">
                     {row.map((cell, j) => (
                       <td key={j} className="px-5 py-4 text-sm text-white/70 align-top">
                         {cell}
@@ -98,7 +98,7 @@ export default function LegalContent({ sections }) {
                 <h2 id={`heading-${section.id}`} className="heading-h4 text-white">
                   {section.title}
                 </h2>
-                <span className="block w-12 h-1 bg-gradient-to-r from-primary-start to-primary-end mt-3 rounded-full" />
+                <span className="block w-12 h-1 bg-gradient-to-b from-primary-start to-primary-end mt-3 rounded-full" />
               </div>
             </div>
 

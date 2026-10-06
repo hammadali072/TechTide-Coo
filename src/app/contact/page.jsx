@@ -1,4 +1,4 @@
-import ContactHeroSec from "@/components/contactHeroSec/contactHeroSec";
+import HeroSec2 from "@/components/heroSec/heroSec2";
 import ContactInfoSec from "@/components/contactInfoSec/contactInfoSec";
 import ContactFormSec from "@/components/contactFormSec/contactFormSec";
 import Faq from "@/components/faq/faq";
@@ -40,7 +40,13 @@ const faqItems = [
 export default function ContactPage() {
   return (
     <>
-      <ContactHeroSec />
+      <HeroSec2
+        pill="Get In Touch with TechTide Corporate LLP"
+        title="Let's Build Your Next Web or Software Project"
+        accentWord="Web or Software Project"
+        description="Have an idea for a website, ERP, CRM, or custom software? Contact us today, and our expert team will help bring your project to life quickly and efficiently."
+        pb="pb-20"
+      />
       <ContactInfoSec />
       <ContactFormSec />
       <Faq

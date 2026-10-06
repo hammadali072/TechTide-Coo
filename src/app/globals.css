@@ -12,6 +12,8 @@
 
   --color-primary-start: #ffa772;
   --color-primary-end: #ff6000;
+  --color-secondary-start: #666666;
+  --color-secondary-end: #0a0a0a;
 
   --color-primary: #ff6000;
 }
@@ -117,16 +119,20 @@
   max-width: 1320px;
   padding-inline: 20px;
   margin-inline: auto;
+  position: relative;
+  z-index: 10;
 }
 
 @utility container-fluid {
   width: 100%;
   padding-inline: 20px;
   margin-inline: auto;
+  position: relative;
+  z-index: 10;
 }
 
 @utility text-gradient {
-  @apply bg-gradient-to-r from-primary-start to-primary-end bg-clip-text text-transparent;
+  @apply bg-gradient-to-b from-primary-start to-primary-end bg-clip-text text-transparent;
 }
 
 @utility surface-shadow {

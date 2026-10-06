@@ -1,7 +1,7 @@
 import { getAllServices, getServiceCategories } from "@/lib/services";
-import ServicesHeroSec from "@/components/servicesHeroSec/servicesHeroSec";
+import HeroSec2 from "@/components/heroSec/heroSec2";
 import ServicesGridSec from "@/components/servicesGridSec/servicesGridSec";
-import ServiceCtaSec from "@/components/serviceCtaSec/serviceCtaSec";
+import { CheckCircleIcon, SparkleIcon } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Our Services | TechTide Corporate LLP",
@@ -16,16 +16,36 @@ export default function ServicesPage() {
 
   return (
     <main>
-      <ServicesHeroSec totalServices={services.length} />
+      <HeroSec2
+        pill="Our Services"
+        pillIcon={<SparkleIcon size={14} weight="fill" />}
+        title="Digital Engineering, Built to Scale"
+        accentWord="Built to Scale"
+        description="We engineer high-performance web applications, native-grade mobile apps, automated AI workflows, and enterprise cloud systems designed to accelerate revenue."
+        pb="pb-16"
+      >
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-4 text-sm text-white/70">
+          <div className="flex items-center gap-2">
+            <CheckCircleIcon size={18} weight="fill" className="text-primary" />
+            <span>{services.length} Core Specializations</span>
+          </div>
+
+          <div className="size-1 rounded-full bg-white/20 hidden sm:block" />
+
+          <div className="flex items-center gap-2">
+            <CheckCircleIcon size={18} weight="fill" className="text-primary" />
+            <span>Zero-Obligation Discovery Call</span>
+          </div>
+
+          <div className="size-1 rounded-full bg-white/20 hidden sm:block" />
+
+          <div className="flex items-center gap-2">
+            <CheckCircleIcon size={18} weight="fill" className="text-primary" />
+            <span>Dedicated Senior Engineers</span>
+          </div>
+        </div>
+      </HeroSec2>
       <ServicesGridSec services={services} categories={categories} />
-      <ServiceCtaSec
-        pill="Next Steps"
-        title="Not sure which service fits your roadmap?"
-        accent="Let's Talk"
-        desc="Schedule a free 15-minute consultation with our senior engineers to analyze your technical requirements and business goals."
-        primaryButtonText="Schedule Free Consultation"
-        primaryButtonHref="/contact"
-      />
     </main>
   );
 }

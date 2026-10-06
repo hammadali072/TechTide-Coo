@@ -20,15 +20,15 @@ export default function LegalSwitcher({ currentSlug }) {
             <Link
               key={policy.slug}
               href={`/${policy.slug}`}
-              className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-primary/30 hover:bg-white/10 transition-colors group"
+              className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 hover:bg-white/10 duration-300 group"
             >
               <div className="flex items-center gap-3">
                 <Icon size={20} className="text-primary" />
-                <span className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">
+                <span className="text-sm font-medium text-white/80 group-hover:text-white duration-300">
                   {policy.name}
                 </span>
               </div>
-              <CaretRightIcon size={16} className="text-white/30 group-hover:text-primary transition-colors" />
+              <CaretRightIcon size={16} className="text-white/30 group-hover:text-primary duration-300" />
             </Link>
           );
         })}

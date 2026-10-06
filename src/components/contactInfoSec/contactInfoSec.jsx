@@ -22,7 +22,7 @@ const cards = [
 
 export default function ContactInfoSec() {
   return (
-    <section className="relative z-10 py-16 bg-tint-black-2 relative border-y border-white/8">
+    <section className="relative z-10 py-16 bg-tint-black-2 border-y border-white/8">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <CopyEmailButton />
@@ -33,10 +33,10 @@ export default function ContactInfoSec() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
-              className="bg-black border border-white/8 rounded-2xl p-6 space-y-4 hover:border-primary/30 transition-all group block"
+              className="bg-black border border-white/8 rounded-2xl p-6 space-y-4 hover:border-primary/30 duration-300 group block"
             >
               <div className="size-11 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center duration-300 group-hover:bg-primary group-hover:border-primary">
-                <Icon size={22} weight="bold" className="text-primary group-hover:text-black transition-colors" />
+                <Icon size={22} weight="bold" className="text-primary group-hover:text-black duration-200" />
               </div>
               <div>
                 <p className="text-xs text-white/40 uppercase tracking-widest font-semibold mb-1">{label}</p>

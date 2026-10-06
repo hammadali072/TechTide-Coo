@@ -1035,6 +1035,79 @@ export const WhyChooseUsData = [
   },
 ];
 
+export const NavbarServicesMegaMenu = [
+  {
+    groups: [
+      {
+        category: "DEVELOPMENT",
+        items: [
+          { title: "Web Application Development", href: "/services/web-development" },
+          { title: "Mobile App Development", href: "/services/mobile-apps" },
+          { title: "SaaS Product Development", href: "/services/saas-engineering" },
+          { title: "Custom Software Development", href: "/services/web-development" },
+          { title: "E-Commerce Development", href: "/services/web-development" },
+        ],
+      },
+      {
+        category: "DESIGN",
+        items: [
+          { title: "UI/UX Design", href: "/services/web-development" },
+          { title: "Brand Identity", href: "/services/seo-marketing" },
+        ],
+      },
+    ],
+  },
+  {
+    groups: [
+      {
+        category: "AI & AUTOMATION",
+        items: [
+          { title: "AI Automation", href: "/services/ai-automation" },
+          { title: "Machine Learning", href: "/services/ai-automation" },
+          { title: "Generative AI", href: "/services/ai-automation" },
+          { title: "API Integration & Workflow Automation", href: "/services/ai-automation" },
+        ],
+      },
+      {
+        category: "SUPPORT",
+        items: [
+          { title: "Ongoing Maintenance & Support", href: "/services/cloud-infrastructure" },
+        ],
+      },
+    ],
+  },
+  {
+    groups: [
+      {
+        category: "BUSINESS GROWTH",
+        items: [
+          { title: "Lead Generation Systems", href: "/services/seo-marketing" },
+          { title: "Sales Funnel & Customer Journey Design", href: "/services/seo-marketing" },
+          { title: "Marketing + Sales Alignment", href: "/services/seo-marketing" },
+          { title: "Automation & CRM Integration", href: "/services/ai-automation" },
+          { title: "Growth Audits & Scaling Strategy", href: "/services/seo-marketing" },
+          { title: "Tech-Driven Business Consulting", href: "/services/cloud-infrastructure" },
+        ],
+      },
+    ],
+  },
+  {
+    groups: [
+      {
+        category: "MARKETING EXPERTISE",
+        items: [
+          { title: "SEO & Organic Growth", href: "/services/seo-marketing" },
+          { title: "Conversion-Optimized Websites & Funnels", href: "/services/web-development" },
+          { title: "Content & Landing Page Strategy", href: "/services/seo-marketing" },
+          { title: "Paid Ads Strategy", href: "/services/seo-marketing" },
+          { title: "Brand Positioning & Messaging", href: "/services/seo-marketing" },
+          { title: "Analytics, Tracking & CRO", href: "/services/seo-marketing" },
+        ],
+      },
+    ],
+  },
+];
+
 export const NavbarServicesData = [
   {
     title: "Web & Custom Software",

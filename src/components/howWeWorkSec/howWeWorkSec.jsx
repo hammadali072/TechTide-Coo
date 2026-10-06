@@ -62,7 +62,7 @@ export default function HowWeWorkSec() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-black text-sm font-bold hover:bg-primary/90 transition-all w-fit"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-sm font-semibold hover:bg-primary/90 duration-200 w-fit"
             >
               Get Started
               <ArrowRightIcon size={16} weight="bold" />
@@ -72,7 +72,7 @@ export default function HowWeWorkSec() {
           <div className="relative">
             <div className="absolute left-5 top-5 bottom-5 w-px bg-white/8 hidden sm:block" />
             <div
-              className="absolute left-5 top-5 w-px bg-gradient-to-b from-primary to-primary/20 hidden sm:block transition-all duration-700 ease-out"
+              className="absolute left-5 top-5 w-px bg-gradient-to-b from-primary to-primary/20 hidden sm:block duration-700 ease-out"
               style={{
                 height:
                   activeIndex < 0
@@ -97,7 +97,7 @@ export default function HowWeWorkSec() {
                     <div className="hidden sm:flex flex-col items-center shrink-0 pt-1">
                       <div
                         className={clsx(
-                          "size-10 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-500",
+                          "size-10 rounded-full border-2 flex items-center justify-center z-10 duration-500",
                           isActive
                             ? "border-primary bg-primary shadow-[0_0_12px_2px] shadow-primary/40"
                             : "border-white/15 bg-tint-black-2"
@@ -107,8 +107,8 @@ export default function HowWeWorkSec() {
                           size={18}
                           weight="bold"
                           className={clsx(
-                            "transition-colors duration-500",
-                            isActive ? "text-black" : "text-white/30"
+                            "duration-500",
+                            isActive ? "text-white" : "text-white/30"
                           )}
                         />
                       </div>
@@ -116,7 +116,7 @@ export default function HowWeWorkSec() {
 
                     <div
                       className={clsx(
-                        "flex-1 rounded-2xl p-6 border transition-all duration-500",
+                        "flex-1 rounded-2xl p-6 border duration-500",
                         isActive
                           ? "bg-black border-primary/25 shadow-lg shadow-primary/5"
                           : "bg-tint-black-2 border-white/8"
@@ -128,7 +128,7 @@ export default function HowWeWorkSec() {
 
                       <h3
                         className={clsx(
-                          "heading-h5 mb-3 transition-colors duration-500",
+                          "heading-h5 mb-3 duration-500",
                           isActive ? "text-primary" : "text-white"
                         )}
                       >

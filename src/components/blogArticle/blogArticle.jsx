@@ -5,8 +5,6 @@ import BlogToc from "./blogToc";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import BlogAuthorCard from "../blogAuthorCard/blogAuthorCard";
-
-// ── Block renderer ──────────────────────────────────────────────────────
 function BlogContent({ blocks }) {
   return (
     <div className="space-y-6 text-sm sm:text-base md:text-lg leading-7 md:leading-8 text-white/70">
@@ -21,7 +19,7 @@ function BlogContent({ blocks }) {
                   className="heading-h3 text-white mt-10 md:mt-14 mb-4 md:mb-6 scroll-mt-32 relative inline-block"
                 >
                   {block.text}
-                  <span className="block w-10 md:w-12 h-1 bg-gradient-to-r from-primary-start to-primary-end mt-2 rounded-full" />
+                  <span className="block w-10 md:w-12 h-1 bg-gradient-to-b from-primary-start to-primary-end mt-2 rounded-full" />
                 </h2>
               );
             }
@@ -96,7 +94,7 @@ function BlogContent({ blocks }) {
               <div key={idx} className="my-8 md:my-10 rounded-xl overflow-hidden border border-white/10 bg-black">
                 <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/10 bg-tint-black-2">
                   <span className="text-xs font-mono text-white/50 uppercase">{block.language}</span>
-                  <button className="text-white/40 hover:text-primary transition-colors" aria-label="Copy code">
+                  <button className="text-white/40 hover:text-primary duration-200" aria-label="Copy code">
                     <CopyIcon size={15} />
                   </button>
                 </div>
@@ -128,7 +126,6 @@ function BlogContent({ blocks }) {
   );
 }
 
-// ── Main component ───────────────────────────────────────────────────────
 export default function BlogArticle({ blog }) {
   const headings = blog.content
     .filter((b) => b.type === "heading")
@@ -136,19 +133,13 @@ export default function BlogArticle({ blog }) {
 
   return (
     <section className="bg-tint-black py-12 md:py-20 relative">
-      <div className="container relative z-10">
-
-        {/* Mobile TOC accordion (above main content) */}
+      <div className="container">
         <div className="lg:hidden mb-8">
           <BlogToc headings={headings} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-
-          {/* ── Main Article Content ── */}
           <div className="lg:col-span-8 min-w-0">
-
-            {/* Key Takeaways */}
             {blog.keyTakeaways && blog.keyTakeaways.length > 0 && (
               <div className="mb-10 p-5 md:p-8 rounded-xl md:rounded-2xl border-l-4 border-l-primary border-y border-r border-white/8 bg-tint-black-2 shadow-lg">
                 <h3 className="heading-h4 text-white mb-4 md:mb-5">Key Takeaways</h3>
@@ -165,7 +156,6 @@ export default function BlogArticle({ blog }) {
 
             <BlogContent blocks={blog.content} />
 
-            {/* Post footer: tags + share + author */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/10 space-y-8 md:space-y-12">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex flex-wrap items-center gap-2">
@@ -176,7 +166,6 @@ export default function BlogArticle({ blog }) {
                     </span>
                   ))}
                 </div>
-                {/* Share buttons visible on mobile (sidebar hidden) */}
                 <div className="lg:hidden">
                   <ShareButtons title={blog.title} />
                 </div>
@@ -186,7 +175,6 @@ export default function BlogArticle({ blog }) {
             </div>
           </div>
 
-          {/* ── Sidebar (desktop only) ── */}
           <aside className="hidden lg:block lg:col-span-4">
             <div className="sticky top-28 space-y-6">
               <BlogToc headings={headings} />
@@ -198,7 +186,7 @@ export default function BlogArticle({ blog }) {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-black text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+                  className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-black text-sm font-bold hover:opacity-90 duration-200 shadow-lg shadow-primary/20"
                 >
                   Book a Strategy Call
                   <ArrowRightIcon size={16} weight="bold" />
@@ -208,7 +196,6 @@ export default function BlogArticle({ blog }) {
               <ShareButtons title={blog.title} />
             </div>
           </aside>
-
         </div>
       </div>
     </section>

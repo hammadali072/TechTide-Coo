@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import clsx from "clsx";
+import Link from "next/link";
 import { PlusIcon } from "@phosphor-icons/react";
 
 export default function LegalToc({ headings }) {
@@ -37,7 +38,7 @@ export default function LegalToc({ headings }) {
     <nav aria-label="Table of contents" className="bg-tint-black-2 border border-white/8 rounded-2xl overflow-hidden print:hidden">
       <button
         onClick={toggle}
-        className="lg:hidden w-full flex items-center justify-between p-5 text-left bg-tint-black-2 hover:bg-white/5 transition-colors group"
+        className="lg:hidden w-full flex items-center justify-between p-5 text-left bg-tint-black-2 hover:bg-white/5 duration-300 group"
         aria-expanded={isOpen}
       >
         <span className="text-sm font-semibold text-white tracking-widest uppercase">On this page</span>
@@ -64,17 +65,17 @@ export default function LegalToc({ headings }) {
       <div
         ref={contentRef}
         className={clsx(
-          "transition-all duration-300 ease-in-out lg:!max-h-none lg:opacity-100",
+          "duration-300 ease-in-out lg:!max-h-none lg:opacity-100",
           isOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0 lg:max-h-none"
         )}
       >
-        <ul className="p-4 lg:p-6 space-y-1">
+        <ul className="p-3 space-y-1">
           {headings.map((h) => (
             <li key={h.id}>
-              <a
+              <Link
                 href={`#${h.id}`}
                 className={clsx(
-                  "block px-3 py-2 text-sm transition-all rounded-lg border-l-2",
+                  "block px-3 py-2 text-sm duration-300 rounded-md border-l-2",
                   activeId === h.id
                     ? "border-primary text-primary bg-primary/5 font-semibold"
                     : "border-transparent text-white/60 hover:text-white hover:bg-white/5"
@@ -87,7 +88,7 @@ export default function LegalToc({ headings }) {
                 }}
               >
                 {h.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

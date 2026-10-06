@@ -46,8 +46,7 @@ export default function AboutCoreValuesSec() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary/5 rounded-full blur-[120px]" />
       </div>
-
-      <div className="container relative z-10">
+      <div className="container">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest">
             Our Core Values
@@ -59,14 +58,13 @@ export default function AboutCoreValuesSec() {
             These principles guide everything we do, from how we collaborate with clients to how we build our products.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {values.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-tint-black-2 border border-white/8 rounded-2xl p-6 hover:border-primary/40 transition-all group"
+              className="bg-tint-black-2 even:bg-tint-black border border-white/8 rounded-2xl p-6 hover:border-primary/40 duration-300 group"
             >
-              <div className="p-3 rounded-xl bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary group-hover:text-black transition-all duration-300">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary w-fit mb-4 group-hover:bg-primary group-hover:text-white duration-300">
                 <Icon size={24} weight="bold" />
               </div>
               <h3 className="heading-h5 text-white mb-2">{title}</h3>

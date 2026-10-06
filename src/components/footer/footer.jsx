@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="relative z-10 bg-tint-black-2 border-t border-white/10 pt-16 pb-8 text-white/80">
       <div className="container">
-        {/* <div className="bg-gradient-to-r from-tint-black-tint to-tint-black-2 border border-white/10 rounded-2xl p-8 lg:p-12 mb-16 shadow-2xl relative overflow-hidden">
+        {/* <div className="bg-gradient-to-b from-tint-black-tint to-tint-black-2 border border-white/10 rounded-2xl p-8 lg:p-12 mb-16 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7">
@@ -58,11 +58,11 @@ export default function Footer() {
                     onChange={(e) => setNewsletterEmail(e.target.value)}
                     placeholder="Enter your work email..."
                     required
-                    className="flex-1 px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all"
+                    className="flex-1 px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:border-primary focus:ring-1 focus:ring-primary text-sm duration-200"
                   />
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-sm font-semibold hover:opacity-95 transition-all shadow-lg shadow-primary/20 whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-sm font-semibold hover:opacity-95 duration-200 shadow-lg shadow-primary/20 whitespace-nowrap"
                   >
                     <span>Subscribe</span>
                     <PaperPlaneTiltIcon size={16} weight="bold" />
@@ -92,7 +92,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 transition-all"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 duration-200"
                 aria-label="LinkedIn"
               >
                 <LinkedinLogoIcon size={20} weight="bold" />
@@ -101,7 +101,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 transition-all"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 duration-200"
                 aria-label="Twitter"
               >
                 <TwitterLogoIcon size={20} weight="bold" />
@@ -110,7 +110,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 transition-all"
+                className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-primary hover:border-primary/50 duration-200"
                 aria-label="Instagram"
               >
                 <InstagramLogoIcon size={20} weight="bold" />
@@ -123,32 +123,32 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/about" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> About Us
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> About Us
                 </Link>
               </li>
               <li>
                 <Link href="/company-profile" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Company Profile
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Company Profile
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Products
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Products
                 </Link>
               </li>
               <li>
                 <Link href="/career" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Careers
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Careers
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Tech Blog
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Tech Blog
                 </Link>
               </li>
               <li>
                 <Link href="/appointment" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Book Strategy Call
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Book Strategy Call
                 </Link>
               </li>
             </ul>
@@ -159,32 +159,32 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/services/web-development" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Web Software
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Web Software
                 </Link>
               </li>
               <li>
                 <Link href="/services/mobile-apps" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Mobile Apps
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Mobile Apps
                 </Link>
               </li>
               <li>
                 <Link href="/services/ai-automation" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> AI & Automation
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> AI & Automation
                 </Link>
               </li>
               <li>
                 <Link href="/services/saas-engineering" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> SaaS Solutions
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> SaaS Solutions
                 </Link>
               </li>
               <li>
                 <Link href="/services/cloud-infrastructure" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Cloud & DevOps
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Cloud & DevOps
                 </Link>
               </li>
               <li>
                 <Link href="/services/seo-marketing" className="group/link hover:text-primary duration-300 flex items-center gap-2">
-                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary transition-all duration-200" /> Growth Marketing
+                  <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Growth Marketing
                 </Link>
               </li>
             </ul>

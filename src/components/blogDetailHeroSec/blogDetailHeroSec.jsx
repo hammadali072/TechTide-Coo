@@ -16,40 +16,31 @@ export default function BlogDetailHeroSec({ blog }) {
 
   return (
     <section className="relative pt-36 pb-16 bg-black overflow-hidden">
-      {/* Blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[400px] md:w-[600px] h-[300px] bg-primary/5 rounded-full blur-[140px]" />
         <div className="absolute bottom-0 right-0 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-primary/8 rounded-full blur-[100px]" />
       </div>
-
-      <div className="container relative z-10">
+      <div className="container">
         <div className="space-y-6 md:space-y-8">
-
-          {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-xs sm:text-sm text-white/50 font-medium flex-wrap">
-            <Link href="/" className="hover:text-primary transition-colors shrink-0">Home</Link>
+            <Link href="/" className="hover:text-primary duration-200 shrink-0">Home</Link>
             <CaretRightIcon size={11} weight="bold" />
-            <Link href="/blog" className="hover:text-primary transition-colors shrink-0">Blog</Link>
+            <Link href="/blog" className="hover:text-primary duration-200 shrink-0">Blog</Link>
             <CaretRightIcon size={11} weight="bold" />
             <span className="text-white/70 truncate max-w-[160px] sm:max-w-xs md:max-w-md">{blog.title}</span>
           </nav>
 
           <div className="space-y-4 md:space-y-6 max-w-4xl">
-            {/* Category pill */}
             <span className="inline-block px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
               {blog.category}
             </span>
-
-            {/* H1 */}
             <h1 className="heading-h1 leading-tight">
               {blog.title}
             </h1>
-
             <p className="text-base md:text-xl leading-relaxed text-white/60 max-w-3xl">
               {blog.excerpt}
             </p>
 
-            {/* Meta row */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-5 pt-4 border-t border-white/10">
               <div className="flex items-center gap-2.5">
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold text-sm shrink-0">
@@ -77,14 +68,13 @@ export default function BlogDetailHeroSec({ blog }) {
             </div>
           </div>
 
-          {/* Featured Image */}
           <div className="relative w-full aspect-[16/9] sm:aspect-[16/8] rounded-xl md:rounded-2xl overflow-hidden border border-white/8 shadow-2xl mt-6 md:mt-10 group">
             <Image
               src={blog.image}
               alt={blog.title}
               fill
               priority
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
           </div>

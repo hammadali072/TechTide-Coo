@@ -1,9 +1,8 @@
-import AboutHeroSec from "@/components/aboutHeroSec/aboutHeroSec";
+import HeroSec2 from "@/components/heroSec/heroSec2";
 import AboutOverviewSec from "@/components/aboutOverviewSec/aboutOverviewSec";
 import AboutMissionVisionSec from "@/components/aboutMissionVisionSec/aboutMissionVisionSec";
 import LeadershipSec from "@/components/leadershipSec/leadershipSec";
 import AboutCoreValuesSec from "@/components/aboutCoreValuesSec/aboutCoreValuesSec";
-import AboutCTASec from "@/components/aboutCTASec/aboutCTASec";
 import Faq from "@/components/faq/faq";
 
 export const metadata = {
@@ -43,7 +42,13 @@ const faqItems = [
 export default function AboutPage() {
   return (
     <>
-      <AboutHeroSec />
+      <HeroSec2
+        pill="About TechTide Corporate LLP"
+        title="Bridging Technology & Business Growth"
+        accentWord="Business Growth"
+        description="We are a team of innovators, developers, designers, marketers, and strategists committed to helping businesses transform ideas into powerful digital solutions."
+        pb="pb-24"
+      />
       <AboutOverviewSec />
       <AboutMissionVisionSec />
       <LeadershipSec />
@@ -54,7 +59,6 @@ export default function AboutPage() {
         subtitle="Get to know who we are, what we stand for and why businesses trust us."
         items={faqItems}
       />
-      {/* <AboutCTASec /> */}
     </>
   );
 }

@@ -63,197 +63,197 @@ export default function SupportSec() {
         <div className="absolute -bottom-1/4 right-0 w-[400px] h-[400px] bg-primary-start/8 rounded-full blur-[120px]" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container">
         <div className="text-center mb-14 space-y-4">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary uppercase tracking-wider">
-            <SparkleIcon size={14} weight="fill" />
-            <span>Free Strategy Session</span>
-          </span>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary uppercase tracking-wider">
+              <SparkleIcon size={14} weight="fill" />
+              <span>Free Strategy Session</span>
+            </span>
 
-          <h2 className="heading-h2">
-            Ready to{" "}
-            <span className="text-gradient">Scale Your Business?</span>
-          </h2>
+            <h2 className="heading-h2">
+              Ready to{" "}
+              <span className="text-gradient">Scale Your Business?</span>
+            </h2>
 
-          <p className="text-white/60 text-base md:text-lg max-w-xl mx-auto leading-relaxed">Book your 15-minute growth strategy call today and let&rsquo;s map out your path to 3-5x more leads.</p>
-        </div>
+            <p className="text-white/60 text-base md:text-lg max-w-xl mx-auto leading-relaxed">Book your 15-minute growth strategy call today and let&rsquo;s map out your path to 3-5x more leads.</p>
+          </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-tint-black-2 border border-white/8 rounded-2xl p-6 md:p-8">
-            <h3 className="heading-h5 mb-6">Book Your Free Consultation</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-tint-black-2 border border-white/8 rounded-2xl p-6 md:p-8">
+              <h3 className="heading-h5 mb-6">Book Your Free Consultation</h3>
 
-            {isSubmitSuccessful ? (
-              <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
-                <CheckCircleIcon
-                  size={52}
-                  weight="fill"
-                  className="text-primary"
-                />
-                <p className="text-white font-semibold text-lg">You&rsquo;re on the list!</p>
-                <p className="text-white/60 text-sm">We&rsquo;ll reach out within 24 hours to confirm your strategy call.</p>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit(onSubmit)}
-                noValidate
-                className="space-y-5"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {isSubmitSuccessful ? (
+                <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
+                  <CheckCircleIcon
+                    size={52}
+                    weight="fill"
+                    className="text-primary"
+                  />
+                  <p className="text-white font-semibold text-lg">You&rsquo;re on the list!</p>
+                  <p className="text-white/60 text-sm">We&rsquo;ll reach out within 24 hours to confirm your strategy call.</p>
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  noValidate
+                  className="space-y-5"
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Field
+                      label="Name"
+                      error={errors.name?.message}
+                      htmlFor="support-name"
+                    >
+                      <input
+                        id="support-name"
+                        type="text"
+                        placeholder="Full Name"
+                        {...register("name", {
+                          required: "Name is required",
+                        })}
+                        className={inputCls(!!errors.name)}
+                      />
+                    </Field>
+
+                    <Field
+                      label="Work Email"
+                      error={errors.email?.message}
+                      htmlFor="support-email"
+                    >
+                      <input
+                        id="support-email"
+                        type="email"
+                        placeholder="john@company.com"
+                        {...register("email", {
+                          required: "Email is required",
+                          pattern: {
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: "Enter a valid email",
+                          },
+                        })}
+                        className={inputCls(!!errors.email)}
+                      />
+                    </Field>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Field
+                      label="Phone / WhatsApp"
+                      error={errors.phone?.message}
+                      htmlFor="support-phone"
+                    >
+                      <input
+                        id="support-phone"
+                        type="tel"
+                        placeholder="e.g. +92 300 1234567"
+                        {...register("phone", {
+                          required: "Phone number is required",
+                        })}
+                        className={inputCls(!!errors.phone)}
+                      />
+                    </Field>
+
+                    <Field
+                      label="Project Type"
+                      error={errors.projectType?.message}
+                      htmlFor="support-project-type"
+                    >
+                      <input
+                        id="support-project-type"
+                        type="text"
+                        placeholder="e.g. Lead Gen Website, SaaS, Marketing"
+                        {...register("projectType", {
+                          required: "Project type is required",
+                        })}
+                        className={inputCls(!!errors.projectType)}
+                      />
+                    </Field>
+                  </div>
+
                   <Field
-                    label="Name"
-                    error={errors.name?.message}
-                    htmlFor="support-name"
+                    label="Your Goals"
+                    error={errors.goals?.message}
+                    htmlFor="support-goals"
                   >
-                    <input
-                      id="support-name"
-                      type="text"
-                      placeholder="Full Name"
-                      {...register("name", {
-                        required: "Name is required",
-                      })}
-                      className={inputCls(!!errors.name)}
-                    />
-                  </Field>
-
-                  <Field
-                    label="Work Email"
-                    error={errors.email?.message}
-                    htmlFor="support-email"
-                  >
-                    <input
-                      id="support-email"
-                      type="email"
-                      placeholder="john@company.com"
-                      {...register("email", {
-                        required: "Email is required",
-                        pattern: {
-                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: "Enter a valid email",
+                    <textarea
+                      id="support-goals"
+                      rows={4}
+                      placeholder="What are your primary goals for this project?"
+                      {...register("goals", {
+                        required: "Please describe your goals",
+                        minLength: {
+                          value: 20,
+                          message: "Please provide at least 20 characters",
                         },
                       })}
-                      className={inputCls(!!errors.email)}
+                      className={clsx(inputCls(!!errors.goals), "resize-none")}
                     />
                   </Field>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Field
-                    label="Phone / WhatsApp"
-                    error={errors.phone?.message}
-                    htmlFor="support-phone"
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white font-semibold text-base shadow-lg shadow-primary/25 duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
                   >
-                    <input
-                      id="support-phone"
-                      type="tel"
-                      placeholder="e.g. +92 300 1234567"
-                      {...register("phone", {
-                        required: "Phone number is required",
-                      })}
-                      className={inputCls(!!errors.phone)}
-                    />
-                  </Field>
-
-                  <Field
-                    label="Project Type"
-                    error={errors.projectType?.message}
-                    htmlFor="support-project-type"
-                  >
-                    <input
-                      id="support-project-type"
-                      type="text"
-                      placeholder="e.g. Lead Gen Website, SaaS, Marketing"
-                      {...register("projectType", {
-                        required: "Project type is required",
-                      })}
-                      className={inputCls(!!errors.projectType)}
-                    />
-                  </Field>
-                </div>
-
-                <Field
-                  label="Your Goals"
-                  error={errors.goals?.message}
-                  htmlFor="support-goals"
-                >
-                  <textarea
-                    id="support-goals"
-                    rows={4}
-                    placeholder="What are your primary goals for this project?"
-                    {...register("goals", {
-                      required: "Please describe your goals",
-                      minLength: {
-                        value: 20,
-                        message: "Please provide at least 20 characters",
-                      },
-                    })}
-                    className={clsx(inputCls(!!errors.goals), "resize-none")}
-                  />
-                </Field>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2.5 py-3.5 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white font-semibold text-base shadow-lg shadow-primary/25 transition-all duration-200 hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                      <span>Booking…</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Book My Strategy Call</span>
-                      <ArrowRightIcon size={18} weight="bold" />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-          </div>
-
-          <div className="flex flex-col gap-5">
-            <div className="bg-tint-black-2 border border-white/8 rounded-2xl p-6 md:p-8 flex-1">
-              <h3 className="heading-h5 mb-6">Why book a call?</h3>
-              <ul className="space-y-5">
-                {whyBookData.map(({ icon: Icon, title, desc }) => (
-                  <li key={title} className="flex items-start gap-3.5">
-                    <span className="mt-0.5 flex-shrink-0 size-9 rounded-md bg-primary/10 shadow-sm shadow-primary/10 border border-primary/20 flex items-center justify-center">
-                      <Icon size={18} weight="duotone" className="text-primary" />
-                    </span>
-                    <div>
-                      <h6 className="text-white font-medium text-sm leading-snug">{title}</h6>
-                      <p className="text-white/50 text-sm mt-0.5 leading-relaxed">{desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    {isSubmitting ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                        <span>Booking…</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Book My Strategy Call</span>
+                        <ArrowRightIcon size={18} weight="bold" />
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
             </div>
 
-            <div className="bg-tint-black border border-white/8 rounded-2xl p-6 md:p-7">
-              <div className="flex items-center gap-2.5 mb-5">
-                <ClockCountdownIcon size={24} weight="duotone" className="text-primary" />
-                <h4 className="heading-h6">Office Hours</h4>
+            <div className="flex flex-col gap-5">
+              <div className="bg-tint-black-2 border border-white/8 rounded-2xl p-6 md:p-8 flex-1">
+                <h3 className="heading-h5 mb-6">Why book a call?</h3>
+                <ul className="space-y-5">
+                  {whyBookData.map(({ icon: Icon, title, desc }) => (
+                    <li key={title} className="flex items-start gap-3.5">
+                      <span className="mt-0.5 flex-shrink-0 size-9 rounded-md bg-primary/10 shadow-sm shadow-primary/10 border border-primary/20 flex items-center justify-center">
+                        <Icon size={18} weight="duotone" className="text-primary" />
+                      </span>
+                      <div>
+                        <h6 className="text-white font-medium text-sm leading-snug">{title}</h6>
+                        <p className="text-white/50 text-sm mt-0.5 leading-relaxed">{desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-3">
-                {officeHours.map(({ day, hours, closed }) => (
-                  <li
-                    key={day}
-                    className="flex items-center justify-between text-sm"
-                  >
-                    <span className="text-white/60">{day}</span>
-                    <span
-                      className={clsx(
-                        "font-medium",
-                        closed ? "text-primary" : "text-white"
-                      )}
+
+              <div className="bg-tint-black border border-white/8 rounded-2xl p-6 md:p-7">
+                <div className="flex items-center gap-2.5 mb-5">
+                  <ClockCountdownIcon size={24} weight="duotone" className="text-primary" />
+                  <h4 className="heading-h6">Office Hours</h4>
+                </div>
+                <ul className="space-y-3">
+                  {officeHours.map(({ day, hours, closed }) => (
+                    <li
+                      key={day}
+                      className="flex items-center justify-between text-sm"
                     >
-                      {hours}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                      <span className="text-white/60">{day}</span>
+                      <span
+                        className={clsx(
+                          "font-medium",
+                          closed ? "text-primary" : "text-white"
+                        )}
+                      >
+                        {hours}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -263,7 +263,7 @@ export default function SupportSec() {
 function inputCls(hasError) {
   return clsx(
     "w-full px-4 py-3 rounded-lg text-sm text-white placeholder:text-white/30",
-    "bg-black/40 border transition-colors duration-150",
+    "bg-black/40 border duration-150",
     hasError
       ? "border-red-500/60 focus:border-red-500"
       : "border-white/10 focus:border-primary/50"

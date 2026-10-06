@@ -15,7 +15,6 @@ export default function ServiceOverviewSec({ service }) {
 
   return (
     <>
-      {/* ── Stats Strip ── */}
       {stats.length > 0 && (
         <section className="py-12 bg-tint-black border-y border-white/8">
           <div className="container">
@@ -42,10 +41,10 @@ export default function ServiceOverviewSec({ service }) {
       <section className="py-24 bg-black relative" aria-labelledby="service-overview-heading">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left Content (8 cols) */}
             <div className="lg:col-span-8 space-y-16">
-              
+
               {/* Overview Narrative */}
               <div className="space-y-6">
                 <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest">
@@ -69,9 +68,7 @@ export default function ServiceOverviewSec({ service }) {
                     <h3 className="heading-h4 text-white">
                       Key Business <span className="text-gradient">Benefits</span>
                     </h3>
-                    <p className="mt-2 text-sm text-white/55">
-                      Why industry leaders choose our engineering approach.
-                    </p>
+                    <p className="mt-2 text-sm text-white/55">Why industry leaders choose our engineering approach.</p>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -81,13 +78,13 @@ export default function ServiceOverviewSec({ service }) {
                       return (
                         <div
                           key={i}
-                          className="flex gap-4 p-5 rounded-2xl bg-tint-black border border-white/8 hover:border-primary/30 transition-colors group"
+                          className="flex gap-4 p-5 rounded-xl bg-tint-black border border-white/8 hover:border-primary/30 duration-300 group"
                         >
-                          <div className="shrink-0 size-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-black transition-colors duration-300">
+                          <div className="shrink-0 size-11 rounded-lg bg-primary/10 border border-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white duration-300">
                             <BenefitIcon size={22} weight="bold" />
                           </div>
                           <div>
-                            <h4 className="text-base font-bold text-white group-hover:text-primary transition-colors">
+                            <h4 className="text-base font-bold text-white group-hover:text-primary duration-300">
                               {benefit.title}
                             </h4>
                             <p className="mt-1.5 text-sm text-white/60 leading-relaxed">
@@ -105,7 +102,7 @@ export default function ServiceOverviewSec({ service }) {
 
             {/* Right Sticky Sidebar (4 cols) */}
             <aside className="lg:col-span-4 lg:sticky lg:top-28 self-start space-y-6">
-              
+
               {/* Deliverables / At a Glance Card */}
               <div className="rounded-2xl p-6 sm:p-7 bg-tint-black-2 border border-white/10 shadow-xl space-y-6">
                 <div>
@@ -132,7 +129,7 @@ export default function ServiceOverviewSec({ service }) {
 
                 <Link
                   href="/contact"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary-start to-primary-end text-black text-sm font-bold hover:opacity-95 transition-all shadow-md shadow-primary/20"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-sm font-bold hover:opacity-95 duration-300 shadow-md shadow-primary/20"
                 >
                   <span>Request Project Scope</span>
                   <ArrowRightIcon size={16} weight="bold" />
@@ -146,30 +143,28 @@ export default function ServiceOverviewSec({ service }) {
                 </h4>
 
                 <div className="space-y-3 text-sm">
-                  <a
+                  <Link
                     href="tel:+923247991484"
-                    className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors group"
+                    className="flex items-center gap-3 text-white/70 hover:text-primary duration-300 group"
                   >
-                    <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40">
+                    <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40 duration-300">
                       <PhoneIcon size={16} weight="bold" />
                     </div>
                     <span>+92 324 7991484</span>
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     href="mailto:info@techtidecorporate.com"
-                    className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors group truncate"
+                    className="flex items-center gap-3 text-white/70 hover:text-primary duration-300 group truncate"
                   >
-                    <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40 shrink-0">
+                    <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40 duration-300 shrink-0">
                       <EnvelopeSimpleIcon size={16} weight="bold" />
                     </div>
                     <span className="truncate">info@techtidecorporate.com</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
-
             </aside>
-
           </div>
         </div>
       </section>

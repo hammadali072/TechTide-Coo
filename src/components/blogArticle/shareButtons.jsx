@@ -36,7 +36,7 @@ export default function ShareButtons({ title }) {
         <button
           onClick={handleCopy}
           aria-label="Copy link"
-          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 transition-all"
+          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 duration-200"
         >
           {copied ? <CheckIcon size={18} weight="bold" className="text-emerald-400" /> : <LinkIcon size={18} />}
         </button>
@@ -45,7 +45,7 @@ export default function ShareButtons({ title }) {
           target="_blank"
           rel="noreferrer"
           aria-label="Share on X (Twitter)"
-          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 transition-all"
+          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 duration-200"
         >
           <TwitterLogoIcon size={18} weight="fill" />
         </a>
@@ -54,7 +54,7 @@ export default function ShareButtons({ title }) {
           target="_blank"
           rel="noreferrer"
           aria-label="Share on LinkedIn"
-          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 transition-all"
+          className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 duration-200"
         >
           <LinkedinLogoIcon size={18} weight="fill" />
         </a>

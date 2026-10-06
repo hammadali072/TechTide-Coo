@@ -12,7 +12,6 @@ export default function BlogToc({ headings }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find all intersecting elements
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveId(entry.target.id);
@@ -36,30 +35,27 @@ export default function BlogToc({ headings }) {
 
   return (
     <nav aria-label="Table of contents" className="bg-tint-black-2 border border-white/8 rounded-2xl overflow-hidden">
-      {/* Mobile Accordion Toggle */}
       <button
         onClick={toggle}
-        className="lg:hidden w-full flex items-center justify-between p-5 text-left bg-tint-black-2 hover:bg-white/5 transition-colors"
+        className="lg:hidden w-full flex items-center justify-between p-5 text-left bg-tint-black-2 hover:bg-white/5 duration-200"
         aria-expanded={isOpen}
       >
         <span className="text-sm font-semibold text-white tracking-widest uppercase">On this page</span>
         <CaretRightIcon
           size={16}
           weight="bold"
-          className={clsx("text-white/50 transition-transform duration-300", isOpen ? "rotate-90" : "")}
+          className={clsx("text-white/50 duration-300", isOpen ? "rotate-90" : "")}
         />
       </button>
 
-      {/* Header (Desktop) */}
       <div className="hidden lg:block p-6 border-b border-white/8">
         <h4 className="text-sm font-semibold text-white tracking-widest uppercase">On this page</h4>
       </div>
 
-      {/* TOC Links */}
       <div
         ref={contentRef}
         className={clsx(
-          "transition-all duration-300 ease-in-out lg:!max-h-none lg:opacity-100",
+          "duration-300 ease-in-out lg:!max-h-none lg:opacity-100",
           isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 lg:max-h-none"
         )}
       >
@@ -69,7 +65,7 @@ export default function BlogToc({ headings }) {
               <a
                 href={`#${h.id}`}
                 className={clsx(
-                  "block px-3 py-2 text-sm transition-all rounded-lg border-l-2",
+                  "block px-3 py-2 text-sm duration-200 rounded-lg border-l-2",
                   activeId === h.id
                     ? "border-primary text-primary bg-primary/5 font-semibold"
                     : "border-transparent text-white/60 hover:text-white hover:bg-white/5"

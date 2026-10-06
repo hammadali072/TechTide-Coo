@@ -10,11 +10,8 @@ import {
 export default function HeroSec() {
   return (
     <section className="relative pt-12 pb-20 md:pt-24 md:pb-30 overflow-hidden">
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[600px] lg:h-[600px] w-[300px] h-[300px] bg-primary/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 left-10 lg:w-72 lg:h-72 w-[200px] h-[200px] bg-primary-start/10 rounded-full blur-[100px] pointer-events-none" /> */}
-
       <div className="container">
-        <div className="relative z-10 flex flex-col items-center lg:gap-8 gap-4 text-center">
+        <div className="flex flex-col items-center lg:gap-8 gap-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/90">
             <SparkleIcon size={16} className="text-primary" weight="fill" />
             <span>Next-Gen Enterprise Digital Solutions</span>
@@ -33,7 +30,7 @@ export default function HeroSec() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
               href="/appointment"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-base font-semibold shadow-xl shadow-primary/25 hover:opacity-95 transition-all hover:scale-[1.02]"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-base font-semibold shadow-xl shadow-primary/25 hover:opacity-95 hover:scale-[1.02] duration-300"
             >
               <span>Book Strategy Call</span>
               <ArrowRightIcon size={18} weight="bold" />
@@ -41,7 +38,7 @@ export default function HeroSec() {
 
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-white/5 border border-white/10 text-white text-base font-medium hover:bg-white/10 hover:border-white/20 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-white/5 border border-white/10 text-white text-base font-medium hover:bg-white/10 hover:border-white/20 duration-300"
             >
               <span>Explore Services</span>
             </Link>

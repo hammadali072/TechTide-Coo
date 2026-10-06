@@ -1,5 +1,5 @@
 import { BlogData } from "@/Data";
-import BlogHeroSec from "@/components/blogHeroSec/blogHeroSec";
+import HeroSec2 from "@/components/heroSec/heroSec2";
 import BlogListSec from "@/components/blogListSec/blogListSec";
 
 export const metadata = {
@@ -22,7 +22,13 @@ export default function BlogListingPage() {
 
   return (
     <main className="bg-black pt-20">
-      <BlogHeroSec />
+      <HeroSec2
+        pill="Insights & Articles"
+        title="Ideas, Guides & Engineering Insights"
+        accentWord="Engineering Insights"
+        description="Explore our deep dives on web development, AI workflow automation, SaaS engineering and growth strategy."
+        pb="pb-24"
+      />
       <BlogListSec posts={sortedPosts} />
     </main>
   );

@@ -1,35 +1,34 @@
-import { TerminalWindowIcon } from "@phosphor-icons/react/dist/ssr";
-
 export default function ServiceTechSec({ service }) {
   const technologies = service.technologies || [];
 
   if (technologies.length === 0) return null;
 
   return (
-    <section className="py-16 bg-tint-black border-y border-white/8 relative" aria-labelledby="service-tech-heading">
-      <div className="container text-center max-w-4xl mx-auto space-y-8">
-        <div className="space-y-3">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/10 bg-white/5 text-white/70 text-xs font-semibold uppercase tracking-widest">
-            <TerminalWindowIcon size={14} className="text-primary" />
-            Technology Ecosystem
-          </span>
-          <h2 id="service-tech-heading" className="heading-h3 text-white">
-            Technologies & Frameworks We Employ
-          </h2>
-          <p className="text-sm text-white/60">
-            Battle-tested modern tooling chosen for long-term maintainability, speed, and security.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          {technologies.map((tech, idx) => (
-            <div
-              key={idx}
-              className="px-5 py-2.5 rounded-xl bg-tint-black-2 border border-white/10 text-white/80 text-sm font-semibold hover:border-primary/50 hover:text-white transition-all duration-300 shadow-sm"
-            >
-              {tech}
+    <section className="py-12 bg-tint-black border-y border-white/8" aria-labelledby="service-tech-heading">
+      <div className="container">
+        <div className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+              <span className="text-[11px] font-bold text-primary uppercase tracking-widest block mb-1">
+                Technology Ecosystem
+              </span>
+              <h4 id="service-tech-heading" className="heading-h4 text-white">
+                Technologies & Tools We Employ
+              </h4>
+              <p className="text-sm text-white/50">Modern tooling chosen for speed, reliability, and scale.</p>
             </div>
-          ))}
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {technologies.map((tech, idx) => (
+              <div
+                key={idx}
+                className="py-3 px-4 rounded-lg bg-tint-black-2 border border-white/8 text-center text-sm font-medium text-white/80 hover:text-white hover:border-primary/40 duration-200"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

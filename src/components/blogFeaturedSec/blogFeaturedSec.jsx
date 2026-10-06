@@ -7,8 +7,8 @@ export default function BlogFeaturedSec({ post }) {
 
   return (
     <section className="bg-tint-black py-16 relative">
-      <div className="container relative z-10">
-        <div className="bg-tint-black-2 border border-white/8 rounded-[2rem] p-6 lg:p-8 hover:border-primary/30 transition-colors duration-500 group">
+      <div className="container">
+        <div className="bg-tint-black-2 border border-white/8 rounded-[2rem] p-6 lg:p-8 hover:border-primary/30 duration-500 group">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <Link href={`/blog/${post.slug}`} className="relative w-full aspect-[4/3] lg:aspect-[4/4] xl:aspect-[4/3.5] rounded-2xl overflow-hidden block">
               <Image
@@ -16,7 +16,7 @@ export default function BlogFeaturedSec({ post }) {
                 alt={post.title}
                 fill
                 priority
-                className="object-cover group-hover:scale-105 duration-500 transition-transform"
+                className="object-cover group-hover:scale-105 duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             </Link>
@@ -32,7 +32,7 @@ export default function BlogFeaturedSec({ post }) {
               </div>
 
               <Link href={`/blog/${post.slug}`} className="block">
-                <h3 className="heading-h3 text-white group-hover:text-primary transition-colors duration-300">
+                <h3 className="heading-h3 text-white group-hover:text-primary duration-300">
                   {post.title}
                 </h3>
               </Link>
@@ -68,7 +68,7 @@ export default function BlogFeaturedSec({ post }) {
               <div className="pt-4">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-black text-sm font-bold hover:scale-[1.02] transition-transform shadow-lg shadow-primary/25"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-black text-sm font-bold hover:scale-[1.02] duration-200 shadow-lg shadow-primary/25"
                 >
                   Read Article
                   <ArrowRightIcon size={16} weight="bold" />

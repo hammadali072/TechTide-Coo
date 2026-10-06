@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CalendarBlankIcon, CheckCircleIcon } from "@phosphor-icons/react/dist/ssr";
+import HeroSec2 from "@/components/heroSec/heroSec2";
 import LegalContent from "./legalContent";
 import LegalToc from "./legalToc";
 import LegalSwitcher from "./legalSwitcher";
@@ -9,53 +10,30 @@ import { COMPANY } from "@/lib/legal";
 export default function LegalPageLayout({ page }) {
   const headings = page.sections.map((s) => ({ id: s.id, text: s.title }));
 
-  const titleParts = page.title.split(page.accentWord);
-  const hasAccent = page.title.includes(page.accentWord);
-
   return (
     <>
       <BackToTop />
 
       <main>
-
-        <section className="relative pt-36 pb-16 bg-black overflow-hidden print:pt-10 print:pb-10">
-          <div className="absolute inset-0 pointer-events-none print:hidden">
-            <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[140px]" />
-            <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
-          </div>
-
-          <div className="container relative z-10 text-center max-w-4xl mx-auto space-y-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest print:hidden">
-              {page.pill}
-            </span>
-
-            <h1 className="heading-h1 text-white">
-              {hasAccent ? (
-                <>
-                  {titleParts[0]}
-                  <span className="text-gradient">{page.accentWord}</span>
-                  {titleParts[1]}
-                </>
-              ) : (
-                page.title
-              )}
-            </h1>
-
-            <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto">{page.intro}</p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 border-t border-white/10">
-              <div className="flex items-center gap-2 text-white/60">
-                <CalendarBlankIcon size={18} weight="bold" className="text-primary/70" />
-                <time className="text-sm font-medium" dateTime={new Date(page.lastUpdated).toISOString()}>
-                  Last updated: {page.lastUpdated}
-                </time>
-              </div>
+        <HeroSec2
+          pill={page.pill}
+          title={page.title}
+          accentWord={page.accentWord}
+          description={page.intro}
+          pb="pb-16"
+        >
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 border-t border-white/10">
+            <div className="flex items-center gap-2 text-white/60">
+              <CalendarBlankIcon size={18} weight="bold" className="text-primary/70" />
+              <time className="text-sm font-medium" dateTime={new Date(page.lastUpdated).toISOString()}>
+                Last updated: {page.lastUpdated}
+              </time>
             </div>
           </div>
-        </section>
+        </HeroSec2>
 
         <section className="bg-tint-black py-20 relative">
-          <div className="container relative z-10">
+          <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
               <aside className="lg:col-span-4 lg:sticky lg:top-28 self-start space-y-8 order-2 lg:order-1">

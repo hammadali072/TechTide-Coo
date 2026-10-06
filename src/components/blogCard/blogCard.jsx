@@ -34,8 +34,8 @@ export default function BlogCard({ item, variant = "default" }) {
           </p>
           <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
             <span className="flex items-center gap-1.5"><ClockIcon size={14} className="text-primary"/> {item.readTime}</span>
-            <Link href={`/blog/${item.slug}`} className="flex items-center gap-1 font-semibold text-white/80 hover:text-primary uppercase tracking-wider group-hover:text-primary transition-colors">
-              Read <ArrowRightIcon size={14} weight="bold" className="group-hover:translate-x-1 transition-transform" />
+            <Link href={`/blog/${item.slug}`} className="flex items-center gap-1 font-semibold text-white/80 hover:text-primary uppercase tracking-wider group-hover:text-primary duration-200">
+              Read <ArrowRightIcon size={14} weight="bold" className="group-hover:translate-x-1 duration-200" />
             </Link>
           </div>
         </div>

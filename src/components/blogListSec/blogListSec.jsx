@@ -59,15 +59,9 @@ export default function BlogListSec({ posts }) {
 
   return (
     <section className="bg-black py-24 relative min-h-[500px]">
-      <div className="container relative z-10">
-
-        {/* ── Unified Toolbar ── */}
+      <div className="container">
         <div className="mb-14 space-y-0 bg-tint-black-2 border border-white/8 rounded-2xl overflow-hidden">
-
-          {/* Row 1: Search + Sort */}
           <div className="flex items-center gap-4 px-5 py-4 border-b border-white/8">
-
-            {/* Search */}
             <div className="relative flex-1 flex items-center">
               <div className="absolute left-3.5 text-white/40 pointer-events-none">
                 <MagnifyingGlassIcon size={18} />
@@ -77,13 +71,13 @@ export default function BlogListSec({ posts }) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search articles, topics, or tags..."
-                className="w-full bg-black/40 border border-white/8 rounded-lg pl-10 pr-10 py-2.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/40 transition-all"
+                className="w-full bg-black/40 border border-white/8 rounded-lg pl-10 pr-10 py-2.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/40 duration-200"
                 aria-label="Search articles"
               />
               {query && (
                 <button
                   onClick={() => setQuery("")}
-                  className="absolute right-3 text-white/30 hover:text-white transition-colors"
+                  className="absolute right-3 text-white/30 hover:text-white duration-200"
                   aria-label="Clear search"
                 >
                   <XIcon size={16} />
@@ -91,23 +85,19 @@ export default function BlogListSec({ posts }) {
               )}
             </div>
 
-            {/* Divider */}
             <div className="hidden sm:block w-px h-8 bg-white/10 shrink-0" />
 
-            {/* Result count */}
             <span className="hidden sm:block text-sm font-medium text-white/40 shrink-0 whitespace-nowrap" aria-live="polite">
               {filteredPosts.length} article{filteredPosts.length !== 1 ? "s" : ""}
             </span>
 
-            {/* Divider */}
             <div className="hidden sm:block w-px h-8 bg-white/10 shrink-0" />
 
-            {/* Sort */}
             <div className="relative shrink-0">
               <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
-                className="appearance-none bg-black/40 border border-white/8 rounded-lg pl-3 pr-8 py-2.5 text-sm text-white/80 focus:outline-none focus:border-primary/60 transition-colors cursor-pointer"
+                className="appearance-none bg-black/40 border border-white/8 rounded-lg pl-3 pr-8 py-2.5 text-sm text-white/80 focus:outline-none focus:border-primary/60 duration-200 cursor-pointer"
                 aria-label="Sort articles"
               >
                 <option value="newest">Newest</option>
@@ -119,7 +109,6 @@ export default function BlogListSec({ posts }) {
             </div>
           </div>
 
-          {/* Row 2: Category Tabs */}
           <div
             className="flex items-center gap-1 px-4 overflow-x-auto"
             role="group"
@@ -132,7 +121,7 @@ export default function BlogListSec({ posts }) {
                 onClick={() => { setActiveCategory(cat.name); setVisibleCount(6); }}
                 aria-pressed={activeCategory === cat.name}
                 className={clsx(
-                  "snap-start shrink-0 px-4 py-3.5 text-sm font-semibold transition-all duration-300 border-b-2 whitespace-nowrap",
+                  "snap-start shrink-0 px-4 py-3.5 text-sm font-semibold duration-300 border-b-2 whitespace-nowrap",
                   activeCategory === cat.name
                     ? "border-primary text-primary"
                     : "border-transparent text-white/50 hover:text-white"
@@ -150,7 +139,6 @@ export default function BlogListSec({ posts }) {
           </div>
         </div>
 
-        {/* Grid */}
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 motion-safe:animate-fade-in-up">
             {visiblePosts.map((post) => (
@@ -160,7 +148,6 @@ export default function BlogListSec({ posts }) {
             ))}
           </div>
         ) : (
-          /* Empty State */
           <div className="flex flex-col items-center justify-center py-20 text-center bg-tint-black-2 border border-white/5 rounded-3xl">
             <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-white/30 mb-4">
               <MagnifyingGlassIcon size={24} />
@@ -171,26 +158,24 @@ export default function BlogListSec({ posts }) {
             </p>
             <button
               onClick={() => { setQuery(""); setActiveCategory("All"); }}
-              className="px-6 py-2 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors"
+              className="px-6 py-2 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 duration-200"
             >
               Clear Filters
             </button>
           </div>
         )}
 
-        {/* Load More */}
         {hasMore && (
           <div className="mt-16 text-center">
             <button
               onClick={handleLoadMore}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-tint-black-2 border border-white/10 text-white font-semibold hover:bg-white/5 hover:border-primary/50 transition-all group"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-tint-black-2 border border-white/10 text-white font-semibold hover:bg-white/5 hover:border-primary/50 duration-200 group"
             >
               Load More Articles
-              <ArrowDownIcon size={16} className="text-white/50 group-hover:text-primary group-hover:translate-y-0.5 transition-all" />
+              <ArrowDownIcon size={16} className="text-white/50 group-hover:text-primary group-hover:translate-y-0.5 duration-200" />
             </button>
           </div>
         )}
-
       </div>
     </section>
   );
