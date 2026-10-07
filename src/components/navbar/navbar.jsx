@@ -5,41 +5,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { NavbarServicesData, NavbarServicesMegaMenu, NavbarAboutData } from "@/Data";
+import { NavbarServicesMegaMenu } from "@/Data";
 import {
   CaretDownIcon,
   ListIcon,
   XIcon,
-  ArrowRightIcon,
-  CodeIcon,
-  DeviceMobileIcon,
-  CpuIcon,
-  CloudIcon,
-  RocketLaunchIcon,
-  TrendUpIcon,
-  BuildingsIcon,
-  UsersThreeIcon,
-  TargetIcon,
   SparkleIcon,
 } from "@phosphor-icons/react";
-
-const iconMap = {
-  CodeIcon,
-  DeviceMobileIcon,
-  CpuIcon,
-  CloudIcon,
-  RocketLaunchIcon,
-  TrendUpIcon,
-  BuildingsIcon,
-  UsersThreeIcon,
-  TargetIcon,
-};
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
@@ -64,7 +41,7 @@ export default function Navbar() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 duration-300 bg-tint-black-2",
-        isScrolled ? "py-3 shadow-lg border-b border-white/10" : "py-5 border-b border-white/5"
+        isScrolled ? "py-3 shadow-lg border-b border-white/10" : "lg:py-5 py-3 border-b border-white/5"
       )}
     >
       <div className="container">
@@ -72,7 +49,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/assets/brand-logo-light.svg"
-              alt="TechTide Corporate LLP"
+              alt="FidayinCorporate"
               width={170}
               height={42}
               className="h-9 w-auto object-contain"
@@ -206,51 +183,50 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={clsx("lg:hidden fixed inset-x-0 top-[73px] rounded-xl bg-tint-black-2 border-b border-white/10 m-5 p-5 shadow-2xl max-h-[85vh] overflow-y-auto duration-300", mobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0")}>
-        <div className="flex flex-col gap-4">
+      <div
+        className={clsx(
+          "lg:hidden fixed inset-x-0 top-[73px] mx-4 p-5 rounded-2xl bg-tint-black-2/75 border border-white/10 shadow-2xl backdrop-blur-2xl max-h-[calc(100vh-90px)] overflow-y-auto duration-300 z-50",
+          mobileMenuOpen
+            ? "translate-y-0 opacity-100 visible pointer-events-auto"
+            : "-translate-y-4 opacity-0 invisible pointer-events-none"
+        )}
+      >
+        <div className="flex flex-col gap-2.5">
           <Link
             href="/"
-            className="text-base font-semibold text-white hover:text-primary duration-200 py-1"
+            onClick={() => setMobileMenuOpen(false)}
+            className={clsx(
+              "text-base font-semibold py-2 px-3 rounded-lg duration-200",
+              pathname === "/"
+                ? "bg-primary/10 text-primary"
+                : "text-white/85 hover:text-white hover:bg-white/5"
+            )}
           >
             Home
           </Link>
 
-          <div className="pb-3">
-            <button
-              onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-              className={clsx("w-full flex items-center justify-between py-1 text-base font-semibold duration-300", mobileAboutOpen ? "text-primary" : "text-white")}
-            >
-              <span>About Us</span>
-              <CaretDownIcon
-                size={16}
-                className={clsx(
-                  "duration-200",
-                  mobileAboutOpen && "rotate-180 text-primary"
-                )}
-              />
-            </button>
-            {mobileAboutOpen && (
-              <div className="mt-2 pl-3 border-l-2 border-primary/15">
-                <ul className="flex flex-col gap-2">
-                  {NavbarAboutData.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-white/70 hover:text-primary py-1"
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <Link
+            href="/about"
+            onClick={() => setMobileMenuOpen(false)}
+            className={clsx(
+              "text-base font-semibold py-2 px-3 rounded-lg duration-200",
+              pathname === "/about"
+                ? "bg-primary/10 text-primary"
+                : "text-white/85 hover:text-white hover:bg-white/5"
             )}
-          </div>
+          >
+            About
+          </Link>
 
-          <div className="pb-3">
+          <div className="rounded-lg overflow-hidden">
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className={clsx("w-full flex items-center justify-between py-1 text-base font-semibold duration-300", mobileServicesOpen ? "text-primary" : "text-white")}
+              className={clsx(
+                "w-full flex items-center justify-between py-2 px-3 text-base font-semibold rounded-lg duration-200",
+                pathname.startsWith("/services") || mobileServicesOpen
+                  ? "bg-primary/10 text-primary"
+                  : "text-white/85 hover:text-white hover:bg-white/5"
+              )}
             >
               <span>Services</span>
               <CaretDownIcon
@@ -261,56 +237,72 @@ export default function Navbar() {
                 )}
               />
             </button>
+
             {mobileServicesOpen && (
-              <div className="mt-3 pl-3 border-l border-white/10 space-y-4">
-                {NavbarServicesMegaMenu.map((col, colIdx) => (
-                  <div key={colIdx} className="space-y-3">
-                    {col.groups.map((group) => (
-                      <div key={group.category} className="space-y-1.5">
-                        <span className="text-[11px] font-bold text-primary tracking-wider uppercase block">
-                          {group.category}
-                        </span>
-                        <ul className="flex flex-col gap-1.5 pl-2">
-                          {group.items.map((item) => (
-                            <li key={item.title}>
-                              <Link
-                                href={item.href}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="text-sm text-white/70 hover:text-white block py-0.5 duration-200"
-                              >
-                                {item.title}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                ))}
+              <div className="mt-2 pl-2 pr-1 py-2 space-y-3 max-h-[45vh] overflow-y-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {NavbarServicesMegaMenu.flatMap((col) => col.groups).map((group) => (
+                    <div
+                      key={group.category}
+                      className="p-3 rounded-xl bg-black/50 border border-white/5 space-y-2"
+                    >
+                      <span className="text-[10px] font-bold text-primary tracking-wider uppercase block">
+                        {group.category}
+                      </span>
+                      <ul className="flex flex-col gap-1.5">
+                        {group.items.map((item) => (
+                          <li key={item.title}>
+                            <Link
+                              href={item.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="text-xs text-white/70 hover:text-white hover:translate-x-0.5 block py-0.5 duration-200"
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
 
           <Link
             href="/blog"
-            className="text-base font-semibold text-white hover:text-primary duration-200 py-1"
+            onClick={() => setMobileMenuOpen(false)}
+            className={clsx(
+              "text-base font-semibold py-2 px-3 rounded-lg duration-200",
+              pathname.startsWith("/blog")
+                ? "bg-primary/10 text-primary"
+                : "text-white/85 hover:text-white hover:bg-white/5"
+            )}
           >
             Blog
           </Link>
 
           <Link
             href="/contact"
-            className="text-base font-semibold text-white hover:text-primary duration-200 py-1"
+            onClick={() => setMobileMenuOpen(false)}
+            className={clsx(
+              "text-base font-semibold py-2 px-3 rounded-lg duration-200",
+              pathname === "/contact"
+                ? "bg-primary/10 text-primary"
+                : "text-white/85 hover:text-white hover:bg-white/5"
+            )}
           >
             Contact
           </Link>
 
-          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+          <div className="pt-3 mt-1 border-t border-white/10">
             <Link
-              href="/contact"
-              className="w-full text-center py-3 rounded-xl bg-gradient-to-b from-primary-start to-primary-end text-white font-semibold shadow-lg"
+              href="/appointment"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-sm font-semibold shadow-lg shadow-primary/20 hover:opacity-95 duration-200"
             >
-              Get in Touch
+              <SparkleIcon size={16} weight="fill" />
+              <span>Book Strategy Call</span>
             </Link>
           </div>
         </div>

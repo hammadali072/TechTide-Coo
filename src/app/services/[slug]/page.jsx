@@ -7,6 +7,7 @@ import ServiceProcessSec from "@/components/serviceProcessSec/serviceProcessSec"
 import ServiceTechSec from "@/components/serviceTechSec/serviceTechSec";
 import Faq from "@/components/faq/faq";
 import RelatedServicesSec from "@/components/relatedServicesSec/relatedServicesSec";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -23,18 +24,21 @@ export async function generateMetadata({ params }) {
 
   if (!service) {
     return {
-      title: "Service Not Found | TechTide Corporate LLP",
+      title: `Service Not Found | ${SITE_NAME}`,
       description: "The requested service could not be found.",
+      robots: { index: false },
     };
   }
 
   return {
-    title: `${service.title} | TechTide Corporate LLP`,
+    title: `${service.title} | ${SITE_NAME}`,
     description: service.shortDesc,
+    alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
-      title: `${service.title} | TechTide Corporate LLP`,
+      title: `${service.title} | ${SITE_NAME}`,
       description: service.shortDesc,
       images: [service.image],
+      type: "website",
     },
   };
 }
@@ -54,16 +58,14 @@ export default async function ServiceDetailPage({ params }) {
     "@type": "Service",
     name: service.title,
     description: service.shortDesc,
+    image: `${SITE_URL}${service.image}`,
     provider: {
       "@type": "Organization",
-      name: "TechTide Corporate LLP",
-      url: "https://techtidecorporate.com",
+      name: SITE_NAME,
+      url: SITE_URL,
     },
     serviceType: service.category,
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-    },
+    areaServed: "Worldwide",
   };
 
   return (

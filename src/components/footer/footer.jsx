@@ -12,6 +12,7 @@ import {
   MapPinIcon,
   PaperPlaneTiltIcon,
   CheckCircleIcon,
+  ArrowUpIcon,
 } from "@phosphor-icons/react";
 
 export default function Footer() {
@@ -25,8 +26,15 @@ export default function Footer() {
     setNewsletterEmail("");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="relative z-10 bg-tint-black-2 border-t border-white/10 pt-16 pb-8 text-white/80">
+    <footer className="relative z-10 bg-tint-black-2 border-t border-white/10 text-white/80">
       <div className="container">
         {/* <div className="bg-gradient-to-b from-tint-black-tint to-tint-black-2 border border-white/10 rounded-2xl p-8 lg:p-12 mb-16 shadow-2xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -73,19 +81,19 @@ export default function Footer() {
           </div>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 py-16 border-b border-white/10">
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block">
               <Image
                 src="/assets/brand-logo-light.svg"
-                alt="TechTide Corporate LLP"
+                alt="FidayinCorporate"
                 width={180}
                 height={45}
                 className="h-9 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed max-w-sm">
-              TechTide Corporate LLP is a modern software development agency specializing in scalable web products, mobile applications, AI workflows, and cloud solutions.
+            <p className="text-sm lg:text-base text-white/70 leading-relaxed max-w-sm">
+              FidayinCorporate is a modern software development agency specializing in scalable web products, mobile applications, AI workflows, and cloud solutions.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <Link
@@ -120,7 +128,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <h4 className="heading-h6 text-white font-semibold">Quick Links</h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 lg:text-base text-sm">
               <li>
                 <Link href="/about" className="group/link hover:text-primary duration-300 flex items-center gap-2">
                   <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> About Us
@@ -156,7 +164,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <h4 className="heading-h6 text-white font-semibold">Our Services</h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 lg:text-base text-sm">
               <li>
                 <Link href="/services/web-development" className="group/link hover:text-primary duration-300 flex items-center gap-2">
                   <span className="size-1.5 bg-primary outline outline-primary outline-offset-2 rounded-full shrink-0 group-hover/link:bg-primary group-hover/link:border-primary duration-200" /> Web Software
@@ -190,46 +198,74 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="heading-h6 text-white font-semibold">Contact Info</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPinIcon size={20} className="text-primary shrink-0 mt-0.5" weight="bold" />
-                <span className="text-white/70">Pan India & Global Remote Operations</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <EnvelopeSimpleIcon size={20} className="text-primary shrink-0" weight="bold" />
-                <Link href="mailto:contact@techtide.co" className="text-white/70 hover:text-primary duration-300">
-                  contact@techtide.co
-                </Link>
-              </li>
-              <li className="flex items-center gap-3">
-                <PhoneIcon size={20} className="text-primary shrink-0" weight="bold" />
-                <Link href="tel:+919876543210" className="text-white/70 hover:text-primary duration-300">
-                  +91 (987) 654-3210
-                </Link>
-              </li>
-            </ul>
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h4 className="text-white/60 font-semibold tracking-widest uppercase text-sm">Direct Contact</h4>
+              <Link href="mailto:contact@fidayinsystems.ai" className="text-white hover:text-primary duration-300 block text-sm lg:text-base">
+                contact@fidayinsystems.ai
+              </Link>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-white/60 font-semibold tracking-widest uppercase text-sm">Global Lines</h4>
+              <ul className="space-y-5 lg:text-base text-sm">
+                <li className="flex flex-col gap-1">
+                  <span className="text-white/60 flex items-center gap-3 text-sm"><Image src="/assets/flags/gb.svg" alt="UK Flag" width={28} height={28} className="object-cover shrink-0" /> UK (London)</span>
+                  <Link href="tel:+442046205555" className="text-white hover:text-primary duration-300 ml-10">
+                    +44 20 4620 5555
+                  </Link>
+                </li>
+                <li className="flex flex-col gap-1">
+                  <span className="text-white/60 flex items-center gap-3 text-sm"><Image src="/assets/flags/ca.svg" alt="Canada Flag" width={28} height={28} className="object-cover shrink-0" /> CA (Montréal)</span>
+                  <Link href="tel:+14388030005" className="text-white hover:text-primary duration-300 ml-10">
+                    +1 438 803 0005
+                  </Link>
+                </li>
+                <li className="flex flex-col gap-1">
+                  <span className="text-white/60 flex items-center gap-3 text-sm"><Image src="/assets/flags/us.svg" alt="USA Flag" width={28} height={28} className="object-cover shrink-0" /> USA (Toll-Free)</span>
+                  <Link href="tel:+18888850688" className="text-white hover:text-primary duration-300 ml-10">
+                    +1 888 885 0688
+                  </Link>
+                </li>
+                <li className="flex flex-col gap-1">
+                  <span className="text-white/60 flex items-center gap-3 text-sm"><Image src="/assets/flags/nl.svg" alt="Netherlands Flag" width={28} height={28} className="object-cover shrink-0" /> NL (EU Portal)</span>
+                  <Link href="tel:+3197010280805" className="text-white hover:text-primary duration-300 ml-10">
+                    +31 970 102 80805
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <div>
-            © {new Date().getFullYear()} TechTide Corporate LLP. All rights reserved.
-          </div>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-primary duration-300">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="hover:text-primary duration-300">
-              Terms of Service
-            </Link>
-            <Link href="/cookie-policy" className="hover:text-primary duration-300">
-              Cookie Policy
-            </Link>
+      </div>
+      <section className="relative bg-primary py-4">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white">
+            <div>
+              © {new Date().getFullYear()} FidayinCorporate. All rights reserved. A trading name of <b>AL RAYAH GLOBAL GROUP LTD</b>.
+            </div>
+
+            <div className="static md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-10 order-first md:order-none">
+              <button
+                type="button"
+                onClick={scrollToTop}
+                aria-label="Back to top"
+                className="size-11 sm:size-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-black duration-300 shadow-lg shadow-primary/30 border-4 border-white cursor-pointer focus:outline-none"
+              >
+                <ArrowUpIcon size={20} weight="bold" />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <Link href="/privacy-policy" className="relative text-white text-sm font-medium after:content-[''] after:absolute after:w-0 after:h-px after:bg-white after:bottom-0 after:left-0 after:duration-500 hover:after:w-full">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="relative text-white text-sm font-medium after:content-[''] after:absolute after:w-0 after:h-px after:bg-white after:bottom-0 after:left-0 after:duration-500 hover:after:w-full">Terms of Service</Link>
+              <Link href="/cookie-policy" className="relative text-white text-sm font-medium after:content-[''] after:absolute after:w-0 after:h-px after:bg-white after:bottom-0 after:left-0 after:duration-500 hover:after:w-full">Cookie Policy
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 }

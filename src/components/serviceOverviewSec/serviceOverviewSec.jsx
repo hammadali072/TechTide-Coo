@@ -129,7 +129,7 @@ export default function ServiceOverviewSec({ service }) {
 
                 <Link
                   href="/contact"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-sm font-bold hover:opacity-95 duration-300 shadow-md shadow-primary/20"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-sm font-bold hover:opacity-95 duration-300 shadow-md shadow-primary/20"
                 >
                   <span>Request Project Scope</span>
                   <ArrowRightIcon size={16} weight="bold" />

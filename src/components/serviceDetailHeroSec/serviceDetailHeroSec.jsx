@@ -60,7 +60,7 @@ export default function ServiceDetailHeroSec({ service }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg bg-gradient-to-r from-primary-start to-primary-end text-white text-sm font-bold hover:opacity-95 duration-300 shadow-lg shadow-primary/25"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-white text-sm font-bold hover:opacity-95 duration-300 shadow-lg shadow-primary/25"
               >
                 <span>Book a Strategy Call</span>
                 <ArrowRightIcon size={16} weight="bold" />

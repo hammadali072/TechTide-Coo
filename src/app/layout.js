@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import clsx from "clsx";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import { SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const schibstedGrotesk = localFont({
@@ -32,8 +33,13 @@ const schibstedGrotesk = localFont({
 });
 
 export const metadata = {
-  title: "TechTide Corporate LLP | Software & Digital Solutions",
-  description: "Accelerate your business with modern web, software, and digital solutions from TechTide Corporate LLP.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "FidayinCorporate | Software & Digital Solutions",
+    template: "%s | FidayinCorporate",
+  },
+  description: "Accelerate your business with modern web, software, and digital solutions from FidayinCorporate.",
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({ children }) {

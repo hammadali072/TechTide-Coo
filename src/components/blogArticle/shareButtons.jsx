@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { LinkIcon, CheckIcon, LinkedinLogoIcon, TwitterLogoIcon } from "@phosphor-icons/react";
-import clsx from "clsx";
+import Link from "next/link";
 
 export default function ShareButtons({ title }) {
   const [copied, setCopied] = useState(false);
@@ -40,7 +40,7 @@ export default function ShareButtons({ title }) {
         >
           {copied ? <CheckIcon size={18} weight="bold" className="text-emerald-400" /> : <LinkIcon size={18} />}
         </button>
-        <a
+        <Link
           href={links.twitter}
           target="_blank"
           rel="noreferrer"
@@ -48,8 +48,8 @@ export default function ShareButtons({ title }) {
           className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 duration-200"
         >
           <TwitterLogoIcon size={18} weight="fill" />
-        </a>
-        <a
+        </Link>
+        <Link
           href={links.linkedin}
           target="_blank"
           rel="noreferrer"
@@ -57,7 +57,7 @@ export default function ShareButtons({ title }) {
           className="w-10 h-10 rounded-full border border-white/10 bg-tint-black-2 flex items-center justify-center text-white/70 hover:text-primary hover:border-primary/30 duration-200"
         >
           <LinkedinLogoIcon size={18} weight="fill" />
-        </a>
+        </Link>
       </div>
     </div>
   );

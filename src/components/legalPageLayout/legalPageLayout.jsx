@@ -4,7 +4,6 @@ import HeroSec2 from "@/components/heroSec/heroSec2";
 import LegalContent from "./legalContent";
 import LegalToc from "./legalToc";
 import LegalSwitcher from "./legalSwitcher";
-import BackToTop from "./backToTop";
 import { COMPANY } from "@/lib/legal";
 
 export default function LegalPageLayout({ page }) {
@@ -12,8 +11,6 @@ export default function LegalPageLayout({ page }) {
 
   return (
     <>
-      <BackToTop />
-
       <main>
         <HeroSec2
           pill={page.pill}

@@ -1,4 +1,4 @@
-// Centralized Static Data Source for TechTide Corporate LLP
+// Centralized Static Data Source for FidayinCorporate
 
 export const ServicesData = [
   {

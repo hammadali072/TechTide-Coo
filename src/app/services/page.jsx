@@ -4,10 +4,10 @@ import ServicesGridSec from "@/components/servicesGridSec/servicesGridSec";
 import { CheckCircleIcon, SparkleIcon } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
-  title: "Our Services | TechTide Corporate LLP",
-  description:
-    "Explore our full-stack engineering, native mobile app development, custom AI automation, SaaS architecture, and cloud infrastructure services.",
+  title: "Our Services | FidayinCorporate",
+  description: "Explore our full-stack engineering, native mobile app development, custom AI automation, SaaS architecture, and cloud infrastructure services.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import clsx from "clsx";
 import { CaretRightIcon } from "@phosphor-icons/react"; // Assuming client-side uses normal import path
+import Link from "next/link";
 
 export default function BlogToc({ headings }) {
   const [activeId, setActiveId] = useState("");
@@ -62,7 +63,7 @@ export default function BlogToc({ headings }) {
         <ul className="p-4 lg:p-6 space-y-1">
           {headings.map((h) => (
             <li key={h.id}>
-              <a
+              <Link
                 href={`#${h.id}`}
                 className={clsx(
                   "block px-3 py-2 text-sm duration-200 rounded-lg border-l-2",
@@ -78,7 +79,7 @@ export default function BlogToc({ headings }) {
                 }}
               >
                 {h.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

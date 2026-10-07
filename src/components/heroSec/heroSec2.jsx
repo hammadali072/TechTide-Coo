@@ -1,18 +1,8 @@
 import clsx from "clsx";
+import Image from "next/image";
+import circleShape from "../../../public/assets/circle-shape.png";
+import circleShape2 from "../../../public/assets/circle-shape-2.png";
 
-/**
- * Reusable hero section for secondary pages (About, Contact, Blog, Services, Legal, etc.)
- *
- * Props:
- * - pill: string | ReactNode (e.g. "Our Services", "About TechTide Corporate LLP")
- * - pillIcon: ReactNode (optional icon to prefix pill text)
- * - title: string | ReactNode (can contain direct JSX or plain text)
- * - accentWord: string (optional word/phrase in title to apply gradient to)
- * - description: string | ReactNode (lead paragraph)
- * - children: ReactNode (optional inline facts, CTAs, tags, etc.)
- * - className: string (optional extra classes on section wrapper)
- * - pb: string (optional bottom padding override, e.g. "pb-24", "pb-20", "pb-16")
- */
 export default function HeroSec2({
   pill,
   pillIcon,
@@ -54,10 +44,14 @@ export default function HeroSec2({
         className
       )}
     >
-      {/* Decorative blurred background blobs */}
       <div className="absolute inset-0 pointer-events-none print:hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+
         <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[140px]" />
         <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
+
+        <Image src={circleShape2} alt="circle shape" className="absolute bottom-0 left-0 max-w-[200px] md:max-w-[300px] opacity-40 object-contain" />
+        <Image src={circleShape} alt="circle shape 2" className="absolute bottom-0 right-0 max-w-[200px] md:max-w-[300px] opacity-40 object-contain" />
       </div>
 
       <div className="container">

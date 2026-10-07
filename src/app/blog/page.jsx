@@ -2,16 +2,21 @@ import { BlogData } from "@/Data";
 import HeroSec2 from "@/components/heroSec/heroSec2";
 import BlogListSec from "@/components/blogListSec/blogListSec";
 
+// export const metadata = {
+//   title: "Blog | FidayinCorporate",
+//   description:"Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+//   openGraph: {
+//     title: "Blog | FidayinCorporate",
+//     description:
+//       "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+//     images: ["/assets/SEO.webp"], // default fallback image
+//   },
+// };
+
 export const metadata = {
-  title: "Blog | TechTide Corporate LLP",
-  description:
-    "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
-  openGraph: {
-    title: "Blog | TechTide Corporate LLP",
-    description:
-      "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
-    images: ["/assets/SEO.webp"], // default fallback image
-  },
+  title: "About Us | FidayinCorporate",
+  description: "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogListingPage() {

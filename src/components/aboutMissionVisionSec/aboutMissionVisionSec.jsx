@@ -5,14 +5,14 @@ const items = [
   {
     label: "Our Mission",
     heading: "Crafting Digital Solutions That Create Real Impact",
-    body: "Techtide Corporate LLP is committed to crafting exceptional digital solutions and reinvesting our growth where it matters — into the youth, into critical job creation, and into open access to education. We stand for progress with intent and partnerships that make a difference.",
+    body: "FidayinCorporate is committed to crafting exceptional digital solutions and reinvesting our growth where it matters — into the youth, into critical job creation, and into open access to education. We stand for progress with intent and partnerships that make a difference.",
     image: "/assets/Our Mission.webp",
     reverse: false,
   },
   {
     label: "Our Vision",
     heading: "Setting a Global Standard in Technological Excellence",
-    body: "Techtide Corporate LLP is committed to setting a global standard in technological excellence. More than a software company, we serve as a trusted partner in innovation and meaningful impact — using advanced technology to uplift communities and build a future-ready world from Pakistan outward.",
+    body: "FidayinCorporate is committed to setting a global standard in technological excellence. More than a software company, we serve as a trusted partner in innovation and meaningful impact — using advanced technology to uplift communities and build a future-ready world from Pakistan outward.",
     image: "/assets/Our Vision.webp",
     reverse: true,
   },

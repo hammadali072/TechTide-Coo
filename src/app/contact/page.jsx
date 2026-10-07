@@ -1,12 +1,11 @@
 import HeroSec2 from "@/components/heroSec/heroSec2";
-import ContactInfoSec from "@/components/contactInfoSec/contactInfoSec";
 import ContactFormSec from "@/components/contactFormSec/contactFormSec";
 import Faq from "@/components/faq/faq";
 
 export const metadata = {
-  title: "Contact Us | TechTide Corporate LLP",
-  description:
-    "Have an idea for a website, ERP, CRM, or custom software? Contact TechTide Corporate LLP today, and our expert team will help bring your project to life quickly and efficiently.",
+  title: "Contact Us | FidayinCorporate",
+  description: "Have an idea for a website, ERP, CRM, or custom software? Contact FidayinCorporate today, and our expert team will help bring your project to life quickly and efficiently.",
+  alternates: { canonical: "/contact" },
 };
 
 const faqItems = [
@@ -41,13 +40,12 @@ export default function ContactPage() {
   return (
     <>
       <HeroSec2
-        pill="Get In Touch with TechTide Corporate LLP"
+        pill="Get In Touch with FidayinCorporate"
         title="Let's Build Your Next Web or Software Project"
         accentWord="Web or Software Project"
         description="Have an idea for a website, ERP, CRM, or custom software? Contact us today, and our expert team will help bring your project to life quickly and efficiently."
         pb="pb-20"
       />
-      <ContactInfoSec />
       <ContactFormSec />
       <Faq
         tag="Contact FAQ"

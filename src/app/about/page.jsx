@@ -6,16 +6,16 @@ import AboutCoreValuesSec from "@/components/aboutCoreValuesSec/aboutCoreValuesS
 import Faq from "@/components/faq/faq";
 
 export const metadata = {
-  title: "About Us | TechTide Corporate LLP",
-  description:
-    "TechTide Corporate LLP is a full-service digital agency and software development company. We partner with startups, SMEs, and enterprises to build scalable, secure, and results-driven digital products that deliver measurable impact.",
+  title: "About Us | FidayinCorporate",
+  description: "FidayinCorporate is a full-service digital agency and software development company. We partner with startups, SMEs, and enterprises to build scalable, secure, and results-driven digital products that deliver measurable impact.",
+  alternates: { canonical: "/about" },
 };
 
 const faqItems = [
   {
-    question: "What is TechTide Corporate LLP?",
+    question: "What is FidayinCorporate?",
     answer:
-      "TechTide Corporate LLP is a full-service digital agency and software development company based in Lahore, Pakistan. We specialize in building high-converting websites, custom web applications, ERP/CRM systems, mobile apps, and digital growth solutions for businesses worldwide.",
+      "FidayinCorporate is a full-service digital agency and software development company based in Lahore, Pakistan. We specialize in building high-converting websites, custom web applications, ERP/CRM systems, mobile apps, and digital growth solutions for businesses worldwide.",
   },
   {
     question: "What industries do you serve?",
@@ -43,7 +43,7 @@ export default function AboutPage() {
   return (
     <>
       <HeroSec2
-        pill="About TechTide Corporate LLP"
+        pill="About FidayinCorporate"
         title="Bridging Technology & Business Growth"
         accentWord="Business Growth"
         description="We are a team of innovators, developers, designers, marketers, and strategists committed to helping businesses transform ideas into powerful digital solutions."

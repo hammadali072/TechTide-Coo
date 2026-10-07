@@ -1,5 +1,5 @@
 export const COMPANY = {
-  name: "TechTide Corporate LLP",
+  name: "FidayinCorporate",
   address: "G3 Heaven Mall, Zaraar Shaheed Road, Lahore, Pakistan",
   email: "info@techtidecorporate.com",
   phone: "+92 324 7991484",
@@ -198,7 +198,7 @@ export const LegalPagesData = {
         id: "intellectual-property",
         title: "Intellectual Property",
         blocks: [
-          { type: "paragraph", text: "Unless otherwise specified in a written agreement, all materials, software, designs, and content created by us remain the exclusive property of TechTide Corporate LLP until full payment has been received. Upon full payment, intellectual property rights for the specific deliverables transfer to the client, subject to any third-party licenses." },
+          { type: "paragraph", text: "Unless otherwise specified in a written agreement, all materials, software, designs, and content created by us remain the exclusive property of FidayinCorporate until full payment has been received. Upon full payment, intellectual property rights for the specific deliverables transfer to the client, subject to any third-party licenses." },
           { type: "paragraph", text: "The content on this website (text, graphics, logos) is owned by us and protected by copyright and intellectual property laws." }
         ]
       },
@@ -236,7 +236,7 @@ export const LegalPagesData = {
         id: "indemnification",
         title: "Indemnification",
         blocks: [
-          { type: "paragraph", text: "You agree to indemnify, defend, and hold harmless TechTide Corporate LLP from and against any claims, liabilities, damages, losses, and expenses arising out of your violation of these Terms or your use of our services." }
+          { type: "paragraph", text: "You agree to indemnify, defend, and hold harmless FidayinCorporate from and against any claims, liabilities, damages, losses, and expenses arising out of your violation of these Terms or your use of our services." }
         ]
       },
       {

@@ -19,8 +19,8 @@ export default function AboutOverviewSec() {
           <div className="lg:col-span-8 space-y-6">
             {[
               "Founded with a vision to bridge the gap between technology and business growth, we partner with startups, SMEs, and enterprises to build scalable, secure, and results-driven digital products. From web and mobile applications to enterprise systems, digital marketing, and business automation, our goal is to create solutions that deliver measurable impact.",
-              "At TechTide Corporate LLP, we are a team of innovators, developers, designers, marketers, and strategists committed to helping businesses transform ideas into powerful digital solutions.",
-              "At TechTide Corporate LLP, we don't just build software, we build partnerships, empower businesses, and create digital experiences that drive growth worldwide.",
+              "At FidayinCorporate, we are a team of innovators, developers, designers, marketers, and strategists committed to helping businesses transform ideas into powerful digital solutions.",
+              "At FidayinCorporate, we don't just build software, we build partnerships, empower businesses, and create digital experiences that drive growth worldwide.",
             ].map((para, idx) => (
               <p key={idx} className="text-base text-white/65 leading-relaxed">
                 {para}
