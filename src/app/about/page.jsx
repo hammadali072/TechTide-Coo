@@ -23,12 +23,12 @@ const faqItems = [
       "We work with startups, SMEs, and enterprises across various industries including e-commerce, healthcare, finance, education, real estate, logistics, and professional services. Our solutions are tailored to each industry's specific needs.",
   },
   {
-    question: "Where is TechTide located?",
+    question: "Where is FidayinCorporate located?",
     answer:
       "Our office is located at G3 Heaven Mall, Zaraar Shaheed Road, Lahore, Pakistan. We operate with a remote-first culture, serving clients globally with team members working across different time zones.",
   },
   {
-    question: "What makes TechTide different from other agencies?",
+    question: "What makes FidayinCorporate different from other agencies?",
     answer:
       "We combine technical excellence with a deep focus on business outcomes. Our approach is consultative — we don't just build what you ask for; we help you define the right strategy, choose the best technology, and create solutions that drive measurable growth.",
   },
@@ -54,7 +54,7 @@ export default function AboutPage() {
       <LeadershipSec />
       <AboutCoreValuesSec />
       <Faq
-        tag="About TechTide"
+        tag="About FidayinCorporate"
         title="Frequently Asked Questions"
         subtitle="Get to know who we are, what we stand for and why businesses trust us."
         items={faqItems}

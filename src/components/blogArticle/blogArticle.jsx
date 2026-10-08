@@ -186,6 +186,7 @@ export default function BlogArticle({ blog }) {
                 </p>
                 <Link
                   href="/contact"
+                  aria-label="Book a Strategy Call with our engineering team"
                   className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-black text-sm font-bold hover:opacity-90 duration-200 shadow-lg shadow-primary/20"
                 >
                   Book a Strategy Call

@@ -144,23 +144,23 @@ export default function ServiceOverviewSec({ service }) {
 
                 <div className="space-y-3 text-sm">
                   <Link
-                    href="tel:+923247991484"
+                    href="tel:+442046205555"
                     className="flex items-center gap-3 text-white/70 hover:text-primary duration-300 group"
                   >
                     <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40 duration-300">
                       <PhoneIcon size={16} weight="bold" />
                     </div>
-                    <span>+92 324 7991484</span>
+                    <span>+44 20 4620 5555</span>
                   </Link>
 
                   <Link
-                    href="mailto:info@techtidecorporate.com"
+                    href="mailto:info@fidayincorporate.io"
                     className="flex items-center gap-3 text-white/70 hover:text-primary duration-300 group truncate"
                   >
                     <div className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary/40 duration-300 shrink-0">
                       <EnvelopeSimpleIcon size={16} weight="bold" />
                     </div>
-                    <span className="truncate">info@techtidecorporate.com</span>
+                    <span className="truncate">info@fidayincorporate.io</span>
                   </Link>
                 </div>
               </div>

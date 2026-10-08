@@ -664,7 +664,7 @@ export const BlogData = [
       {
         type: "quote",
         text: "The fastest request is the one your server never has to handle.",
-        cite: "Rohan Kapoor, TechTide",
+        cite: "Rohan Kapoor, FidayinCorporate",
       },
       { type: "heading", id: "reliability-and-cost", text: "Reliability and Cost", level: 2 },
       {
@@ -762,7 +762,7 @@ export const BlogData = [
       {
         type: "quote",
         text: "Automation earns trust when every action is explainable and reversible.",
-        cite: "Sneha Reddi, TechTide",
+        cite: "Sneha Reddi, FidayinCorporate",
       },
       { type: "heading", id: "measuring-roi", text: "Measuring ROI", level: 2 },
       {
@@ -862,7 +862,7 @@ export const BlogData = [
       {
         type: "quote",
         text: "If you cannot explain an invoice line from raw events, your metering is not finished.",
-        cite: "Rohan Kapoor, TechTide",
+        cite: "Rohan Kapoor, FidayinCorporate",
       },
       { type: "heading", id: "scaling-and-observability", text: "Scaling and Observability", level: 2 },
       {
@@ -897,7 +897,7 @@ export const LeadershipData = [
     image: "/assets/businesswoman-working-laptop.jpg (1).webp",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "rohan@techtide.co",
+    email: "rohan@FidayinCorporate.co",
   },
   {
     id: "sneha-reddi",
@@ -907,7 +907,7 @@ export const LeadershipData = [
     image: "/assets/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display.webp",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "sneha@techtide.co",
+    email: "sneha@FidayinCorporate.co",
   },
   {
     id: "wade-warren",
@@ -917,7 +917,7 @@ export const LeadershipData = [
     image: "/assets/branding-strategy-marketing-business-graphic-design.webp",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "wade@techtide.co",
+    email: "wade@FidayinCorporate.co",
   },
   {
     id: "bessie-cooper",
@@ -927,7 +927,7 @@ export const LeadershipData = [
     image: "/assets/businesswoman-working-laptop.jpg (1).webp",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "bessie@techtide.co",
+    email: "bessie@FidayinCorporate.co",
   },
 ];
 
@@ -935,7 +935,7 @@ export const TestimonialsData = [
   {
     id: "raynova",
     quote:
-      "TechTide completely transformed our web application. The sub-second static load times tripled our organic conversions within the first 60 days of launch.",
+      "FidayinCorporate completely transformed our web application. The sub-second static load times tripled our organic conversions within the first 60 days of launch.",
     author: "Vikram Mehta",
     role: "CTO, Raynova Technologies",
     company: "Raynova Tech",
@@ -944,7 +944,7 @@ export const TestimonialsData = [
   {
     id: "aura",
     quote:
-      "The AI automation system designed by TechTide streamlined our entire inbound lead processing workflow. Our team saves over 25 hours every single week.",
+      "The AI automation system designed by FidayinCorporate streamlined our entire inbound lead processing workflow. Our team saves over 25 hours every single week.",
     author: "Ananya Sharma",
     role: "VP of Product, Aura Commerce",
     company: "Aura Commerce",
@@ -1149,14 +1149,14 @@ export const NavbarServicesData = [
 
 export const NavbarAboutData = [
   {
-    title: "About TechTide",
+    title: "About FidayinCorporate",
     desc: "Learn about our journey, culture, and core mission.",
     href: "/about",
     iconName: "BuildingsIcon",
   },
   {
     title: "Leadership Team",
-    desc: "Meet the strategists and engineers powering TechTide.",
+    desc: "Meet the strategists and engineers powering FidayinCorporate.",
     href: "/about#leadership",
     iconName: "UsersThreeIcon",
   },

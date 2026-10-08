@@ -1,9 +1,9 @@
 export const COMPANY = {
   name: "FidayinCorporate",
-  address: "G3 Heaven Mall, Zaraar Shaheed Road, Lahore, Pakistan",
-  email: "info@techtidecorporate.com",
-  phone: "+92 324 7991484",
-  websiteName: "TechTide Corporate",
+  address: "11-12 Old Bond Street, Mayfair London W1S 4PN, United Kingdom",
+  email: "info@fidayincorporate.io",
+  phone: "+44 20 4620 5555",
+  websiteName: "FidayinCorporate",
 };
 
 export const LegalPagesData = {

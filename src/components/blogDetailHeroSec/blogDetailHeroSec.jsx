@@ -23,9 +23,9 @@ export default function BlogDetailHeroSec({ blog }) {
       <div className="container">
         <div className="space-y-6 md:space-y-8">
           <nav className="flex items-center gap-1.5 text-xs sm:text-sm text-white/50 font-medium flex-wrap">
-            <Link href="/" className="hover:text-primary duration-200 shrink-0">Home</Link>
+            <Link href="/" aria-label="Go back to the home page" className="hover:text-primary duration-200 shrink-0">Home</Link>
             <CaretRightIcon size={11} weight="bold" />
-            <Link href="/blog" className="hover:text-primary duration-200 shrink-0">Blog</Link>
+            <Link href="/blog" aria-label="Go back to the blog page" className="hover:text-primary duration-200 shrink-0">Blog</Link>
             <CaretRightIcon size={11} weight="bold" />
             <span className="text-white/70 truncate max-w-[160px] sm:max-w-xs md:max-w-md">{blog.title}</span>
           </nav>

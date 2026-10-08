@@ -80,7 +80,7 @@ export default function ContactFormSec() {
     } catch {
       setToast({
         type: "error",
-        message: "Something went wrong. Please try again or email us directly at info@techtidecorporate.com.",
+        message: "Something went wrong. Please try again or email us directly at info@fidayincorporate.io.",
       });
     } finally {
       setSubmitting(false);
@@ -102,7 +102,7 @@ export default function ContactFormSec() {
               </div>
               <div>
                 <h3 className="text-base font-bold text-white mb-1">Email Us</h3>
-                <Link href="mailto:contact@fidayinsystems.ai" className="text-primary hover:text-primary/80 duration-200 block mb-1 text-sm font-medium">contact@fidayinsystems.ai</Link>
+                <Link href="mailto:info@fidayincorporate.io" aria-label="Email us at info@fidayincorporate.io" className="text-primary hover:text-primary/80 duration-200 block mb-1 text-sm font-medium">info@fidayincorporate.io</Link>
                 <p className="text-xs text-white/50">We reply within 24 hours</p>
               </div>
             </div>
@@ -116,19 +116,19 @@ export default function ContactFormSec() {
                 <h3 className="text-base font-bold text-white mb-3">Call Us</h3>
                 <ul className="space-y-3 mb-4">
                   <li className="flex justify-start gap-3 items-center text-sm">
-                    <Link href="tel:+442046205555" className="text-primary font-medium hover:text-primary/80 duration-200">+44 20 4620 5555</Link>
+                    <Link href="tel:+442046205555" aria-label="Call us at +44 20 4620 5555" className="text-primary font-medium hover:text-primary/80 duration-200">+44 20 4620 5555</Link>
                     <span className="text-[10px] uppercase bg-[#1f1f1f] text-white/50 px-2 py-0.5 rounded font-semibold tracking-wider">UK</span>
                   </li>
                   <li className="flex justify-start gap-3 items-center text-sm">
-                    <Link href="tel:+14388030005" className="text-primary font-medium hover:text-primary/80 duration-200">+1 438 803 0005</Link>
+                    <Link href="tel:+14388030005" aria-label="Call us at +1 438 803 0005" className="text-primary font-medium hover:text-primary/80 duration-200">+1 438 803 0005</Link>
                     <span className="text-[10px] uppercase bg-[#1f1f1f] text-white/50 px-2 py-0.5 rounded font-semibold tracking-wider">CA</span>
                   </li>
                   <li className="flex justify-start gap-3 items-center text-sm">
-                    <Link href="tel:+18888850688" className="text-primary font-medium hover:text-primary/80 duration-200">+1 888 885 0688</Link>
+                    <Link href="tel:+18888850688" aria-label="Call us at +1 888 885 0688" className="text-primary font-medium hover:text-primary/80 duration-200">+1 888 885 0688</Link>
                     <span className="text-[10px] uppercase bg-[#1f1f1f] text-white/50 px-2 py-0.5 rounded font-semibold tracking-wider">USA</span>
                   </li>
                   <li className="flex justify-start gap-3 items-center text-sm">
-                    <Link href="tel:+3197010280805" className="text-primary font-medium hover:text-primary/80 duration-200">+31 970 102 80805</Link>
+                    <Link href="tel:+3197010280805" aria-label="Call us at +31 970 102 80805" className="text-primary font-medium hover:text-primary/80 duration-200">+31 970 102 80805</Link>
                     <span className="text-[10px] uppercase bg-[#1f1f1f] text-white/50 px-2 py-0.5 rounded font-semibold tracking-wider">CH</span>
                   </li>
                 </ul>
@@ -232,11 +232,11 @@ export default function ContactFormSec() {
                       type="tel"
                       {...register("phone", {
                         pattern: {
-                          value: /^(03\d{9}|\+\d{7,15})$/,
-                          message: "Use 03XXXXXXXXX or +country code format",
+                          value: /^\+\d{7,15}$/,
+                          message: "Use +country code format",
                         },
                       })}
-                      placeholder="03001234567 or +1..."
+                      placeholder="+1234567890"
                       className={inputCls}
                     />
                   </Field>
@@ -291,7 +291,7 @@ export default function ContactFormSec() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="TechTide Corporate Office Location"
+          title="FidayinCorporate Office Location"
           className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 duration-500"
         />
       </div>

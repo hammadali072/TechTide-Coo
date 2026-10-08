@@ -9,8 +9,8 @@ const cards = [
   {
     icon: PhoneIcon,
     label: "Call Us",
-    value: "+92 324 7991484",
-    href: "tel:+923247991484",
+    value: "+44 20 4620 5555",
+    href: "tel:+442046205555",
   },
   {
     icon: MapPinIcon,
@@ -31,6 +31,7 @@ export default function ContactInfoSec() {
             <Link
               key={label}
               href={href}
+              aria-label={label === "Call Us" ? "Call us at +44 20 4620 5555" : ""}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               className="bg-black border border-white/8 rounded-2xl p-6 space-y-4 hover:border-primary/30 duration-300 group block"

@@ -20,21 +20,21 @@ export default function BlogCard({ item, variant = "default" }) {
             className="object-cover group-hover:scale-110 duration-500"
           />
           <div className="absolute inset-x-0 bottom-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent" />
-          
+
           <div className="absolute bottom-3 left-3 bg-primary/90 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
             {item.category}
           </div>
         </Link>
         <div className="flex-1 flex flex-col">
-          <Link href={`/blog/${item.slug}`} className="heading-h6 text-white mb-3 hover:text-primary duration-200 line-clamp-2">
+          <Link href={`/blog/${item.slug}`} aria-label={`Read more about ${item.title}`} className="heading-h6 text-white mb-3 hover:text-primary duration-200 line-clamp-2">
             {item.title}
           </Link>
           <p className="text-sm text-white/60 line-clamp-2 mb-4">
             {item.excerpt}
           </p>
           <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
-            <span className="flex items-center gap-1.5"><ClockIcon size={14} className="text-primary"/> {item.readTime}</span>
-            <Link href={`/blog/${item.slug}`} className="flex items-center gap-1 font-semibold text-white/80 hover:text-primary uppercase tracking-wider group-hover:text-primary duration-200">
+            <span className="flex items-center gap-1.5"><ClockIcon size={14} className="text-primary" /> {item.readTime}</span>
+            <Link href={`/blog/${item.slug}`} aria-label={`Read more about ${item.title}`} className="flex items-center gap-1 font-semibold text-white/80 hover:text-primary uppercase tracking-wider group-hover:text-primary duration-200">
               Read <ArrowRightIcon size={14} weight="bold" className="group-hover:translate-x-1 duration-200" />
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function BlogCard({ item, variant = "default" }) {
   return (
     <article className="group bg-tint-black-2 rounded-2xl xl:py-5 xl:pb-6 xl:px-5 p-4 border border-white/8 hover:border-primary/30 shadow-lg hover:shadow-primary/10 hover:-translate-y-2 duration-300">
       <div className="relative">
-        <Link href={`/blog/${item.slug}`} className="relative inline-block w-full h-full aspect-[4/2.5] rounded-xl overflow-hidden">
+        <Link href={`/blog/${item.slug}`} aria-label={`Read more about ${item.title}`} className="relative inline-block w-full h-full aspect-[4/2.5] rounded-xl overflow-hidden">
           <Image
             src={item.image}
             alt={item.title}
@@ -74,6 +74,7 @@ export default function BlogCard({ item, variant = "default" }) {
       <div className="pt-10 text-center flex flex-col items-center gap-4">
         <Link
           href={`/blog/${item.slug}`}
+          aria-label={`Read more about ${item.title}`}
           className="heading-h5 text-white leading-snug hover:text-primary duration-200 line-clamp-3"
         >
           {item.title}
@@ -81,6 +82,7 @@ export default function BlogCard({ item, variant = "default" }) {
 
         <Link
           href={`/blog/${item.slug}`}
+          aria-label={`Read more about ${item.title}`}
           className="inline-flex items-center gap-2 text-base font-semibold uppercase text-white/50 hover:text-primary duration-200"
         >
           Read More

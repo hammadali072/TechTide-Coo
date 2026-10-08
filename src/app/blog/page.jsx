@@ -4,18 +4,18 @@ import BlogListSec from "@/components/blogListSec/blogListSec";
 
 // export const metadata = {
 //   title: "Blog | FidayinCorporate",
-//   description:"Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+//   description:"Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the FidayinCorporate team.",
 //   openGraph: {
 //     title: "Blog | FidayinCorporate",
 //     description:
-//       "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+//       "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the FidayinCorporate team.",
 //     images: ["/assets/SEO.webp"], // default fallback image
 //   },
 // };
 
 export const metadata = {
   title: "About Us | FidayinCorporate",
-  description: "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the TechTide team.",
+  description: "Insights on web development, AI workflow automation, SaaS engineering and growth strategy from the FidayinCorporate team.",
   alternates: { canonical: "/blog" },
 };
 

@@ -21,6 +21,7 @@ export default function BlogSec() {
           </div>
           <Link
             href="/blog"
+            aria-label="Explore all blog posts"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-semibold hover:bg-white/10 duration-300 shrink-0 w-fit"
           >
             <span>Explore All Posts</span>

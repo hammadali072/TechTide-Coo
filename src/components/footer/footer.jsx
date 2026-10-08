@@ -43,7 +43,7 @@ export default function Footer() {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
                 Stay Ahead of Tech Trends
               </span>
-              <h3 className="heading-h3 text-white">Subscribe to TechTide Corporate Insights</h3>
+              <h3 className="heading-h3 text-white">Subscribe to FidayinCorporate Insights</h3>
               <p className="text-sm text-white/70 mt-2 max-w-xl">
                 Get monthly deep dives on AI automation, SaaS architecture, web performance, and software growth strategies delivered straight to your inbox.
               </p>
@@ -201,8 +201,8 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h4 className="text-white/60 font-semibold tracking-widest uppercase text-sm">Direct Contact</h4>
-              <Link href="mailto:contact@fidayinsystems.ai" className="text-white hover:text-primary duration-300 block text-sm lg:text-base">
-                contact@fidayinsystems.ai
+              <Link href="mailto:info@fidayincorporate.io" className="text-white hover:text-primary duration-300 block text-sm lg:text-base">
+                info@fidayincorporate.io
               </Link>
             </div>
 

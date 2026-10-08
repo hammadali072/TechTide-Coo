@@ -23,10 +23,10 @@ export default function WhyChooseUs() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
-            The TechTide Advantage
+            The FidayinCorporate Advantage
           </span>
           <h2 className="heading-h2 text-white">
-            Why Visionary Leaders <span className="text-gradient">Choose TechTide</span>
+            Why Visionary Leaders <span className="text-gradient">Choose FidayinCorporate</span>
           </h2>
           <p className="text-base text-white/70">
             We deliver top-tier engineering quality with the speed and flexibility of a dedicated technology partner.

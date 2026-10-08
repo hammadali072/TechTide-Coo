@@ -20,7 +20,7 @@ export default function Testimonials() {
             Trusted By <span className="text-gradient">Innovative Teams</span> Worldwide
           </h2>
           <p className="text-base text-white/70">
-            Hear directly from founders and engineering leaders who scaled their products with TechTide.
+            Hear directly from founders and engineering leaders who scaled their products with FidayinCorporate.
           </p>
         </div>
         <Swiper

@@ -10,7 +10,7 @@ export default function BlogFeaturedSec({ post }) {
       <div className="container">
         <div className="bg-tint-black-2 border border-white/8 rounded-[2rem] p-6 lg:p-8 hover:border-primary/30 duration-500 group">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <Link href={`/blog/${post.slug}`} className="relative w-full aspect-[4/3] lg:aspect-[4/4] xl:aspect-[4/3.5] rounded-2xl overflow-hidden block">
+            <Link href={`/blog/${post.slug}`} aria-label={`Read more about ${post.title}`} className="relative w-full aspect-[4/3] lg:aspect-[4/4] xl:aspect-[4/3.5] rounded-2xl overflow-hidden block">
               <Image
                 src={post.image}
                 alt={post.title}
@@ -31,7 +31,7 @@ export default function BlogFeaturedSec({ post }) {
                 </span>
               </div>
 
-              <Link href={`/blog/${post.slug}`} className="block">
+              <Link href={`/blog/${post.slug}`} aria-label={`Read more about ${post.title}`} className="block">
                 <h3 className="heading-h3 text-white group-hover:text-primary duration-300">
                   {post.title}
                 </h3>
@@ -68,6 +68,7 @@ export default function BlogFeaturedSec({ post }) {
               <div className="pt-4">
                 <Link
                   href={`/blog/${post.slug}`}
+                  aria-label={`Read more about ${post.title}`}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-b from-primary-start to-primary-end text-black text-sm font-bold hover:scale-[1.02] duration-200 shadow-lg shadow-primary/25"
                 >
                   Read Article

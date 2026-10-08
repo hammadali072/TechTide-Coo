@@ -3,7 +3,7 @@ import LegalPageLayout from "@/components/legalPageLayout/legalPageLayout";
 
 export const metadata = {
   title: "Terms of Service | FidayinCorporate",
-  description: "Read the legal terms, conditions, and guidelines governing your use of TechTide Corporate website and services.",
+  description: "Read the legal terms, conditions, and guidelines governing your use of FidayinCorporate website and services.",
   robots: { index: true, follow: true },
   alternates: { canonical: "/terms-of-service" },
 };
